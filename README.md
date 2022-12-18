@@ -18,3 +18,6 @@ To download everything you can use following commands in your git console:
 ```sh
 $ git clone --recurse-submodules -j8 git://github.com/SemanGit/SemanGit.git
 ```
+
+This fork contains extensions to the original SemanGit ontology that is used in experiments for Ontology-based data access on the GHTorrent MySQL dataset using Ontop.
+The extensions are contained in the [**obda**](obda) directory
