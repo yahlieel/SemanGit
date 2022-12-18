@@ -1,0 +1,2135 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://visualdataweb.org/semangit/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://visualdataweb.org/semangit/">
+    <Prefix name="" IRI="http://visualdataweb.org/semangit/"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/#"/>
+    <Prefix name="dbo" IRI="http://dbpedia.org/ontology/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="obda" IRI="https://w3id.org/obda/vocabulary#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+        <Literal>Dennis Kubitza, Matthias Böckmann</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <Literal xml:lang="en">An onthology for git</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+        <Literal xml:lang="en">SemanGit</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en">1.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="dbo:City"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dbo:State"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="comment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="commentable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="commit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="followable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="github_commit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="github_follow_event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="github_issue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="github_issue_event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="github_organization_join_event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="github_project"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="github_project_join_event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="github_project_language"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="github_project_milestone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="github_pull_request"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="github_pull_request_action"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="github_repo_label"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="github_user"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="programming_language"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="pull_request"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="repository"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="user"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="rdfs:Datatype"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="comment_author"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="comment_for"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="commit_author"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="commit_belongs_to_repository"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="commit_commited_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="commit_has_parent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_follower"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_follows"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_forked_from"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_has_owner"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_issue_assignee"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_issue_event_actor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_issue_event_for"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_issue_label_used_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_issue_project"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_issue_pull_request"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_issue_reporter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_organization_is_joined"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_organization_joined_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_owner_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_project_has_milestone"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_project_joined"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_project_joining_user"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_project_language_is"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_project_language_repo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_pull_request_action_id"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_pull_request_action_pull_request"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_pull_request_action_type"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_repo_label_name"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_repo_label_project"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_user_city"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="github_user_state"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="has_authored_comment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="has_authored_commit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="has_committed_commit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="pull_request_base_commit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="pull_request_base_project"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="pull_request_has_commit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="pull_request_head_commit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="pull_request_head_project"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="pull_request_user"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="repository_has_commit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="comment_body"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="comment_created_at"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="comment_line"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="comment_pos"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="commit_created_at"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="commit_message"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="commit_sha"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_following_since"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_issue_created_at"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_issue_event_action"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_issue_event_action_specific_sha"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_issue_event_created_at"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_organization_joined_at"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_project_deleted"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_project_description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_project_join_event_created_at"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_project_language_bytes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_project_language_timestamp"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_project_milestone_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_project_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_pull_request_action_created_at"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_pull_request_id"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_pull_request_intra_branch"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_pull_request_merged"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_user_company"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_user_country_code"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_user_created_at"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_user_deleted"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_user_fake"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_user_is_org"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_user_lat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_user_lng"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_user_location"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_user_login"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_user_or_project"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="programming_language_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="repository_created_at"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="repository_url"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="user_email"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="github_project"/>
+        <ObjectIntersectionOf>
+            <Class IRI="repository"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="github_has_owner"/>
+                <Class IRI="user"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="github_pull_request"/>
+        <ObjectIntersectionOf>
+            <Class IRI="github_issue"/>
+            <Class IRI="pull_request"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="github_issue_pull_request"/>
+                <Class IRI="github_pull_request"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="github_commit"/>
+        <Class IRI="commentable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="github_commit"/>
+        <Class IRI="commit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="github_issue"/>
+        <Class IRI="commentable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="github_project"/>
+        <Class IRI="followable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="github_pull_request"/>
+        <Class IRI="commentable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="github_user"/>
+        <Class IRI="followable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="github_user"/>
+        <Class IRI="user"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="repository"/>
+        <Class IRI="user"/>
+    </DisjointClasses>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="comment_author"/>
+        <ObjectProperty IRI="has_authored_comment"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="commit_author"/>
+        <ObjectProperty IRI="has_authored_commit"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="commit_belongs_to_repository"/>
+        <ObjectProperty IRI="repository_has_commit"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="commit_commited_by"/>
+        <ObjectProperty IRI="has_committed_commit"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="github_has_owner"/>
+        <ObjectProperty IRI="github_owner_of"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="comment_author"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="commit_author"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="commit_belongs_to_repository"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="commit_commited_by"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="commit_has_parent"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="github_has_owner"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="github_issue_event_actor"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="github_issue_event_for"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="github_issue_project"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="github_issue_pull_request"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="github_user_city"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="github_user_state"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="pull_request_base_project"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="pull_request_head_project"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="pull_request_user"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="github_owner_of"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="has_authored_comment"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="has_authored_commit"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="has_committed_commit"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="repository_has_commit"/>
+    </InverseFunctionalObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="commit_has_parent"/>
+    </AsymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="commit_has_parent"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="comment_author"/>
+        <Class IRI="comment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="comment_for"/>
+        <Class IRI="comment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="commit_author"/>
+        <Class IRI="commit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="commit_belongs_to_repository"/>
+        <Class IRI="commit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="commit_commited_by"/>
+        <Class IRI="commit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="commit_has_parent"/>
+        <Class IRI="commit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_follower"/>
+        <Class IRI="github_follow_event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_follows"/>
+        <Class IRI="github_follow_event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_forked_from"/>
+        <Class IRI="github_project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_has_owner"/>
+        <Class IRI="github_project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_issue_assignee"/>
+        <Class IRI="github_issue"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_issue_event_actor"/>
+        <Class IRI="github_issue_event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_issue_event_for"/>
+        <Class IRI="github_issue_event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_issue_label_used_by"/>
+        <Class IRI="github_repo_label"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_issue_project"/>
+        <Class IRI="github_issue"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_issue_pull_request"/>
+        <Class IRI="github_issue"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_issue_reporter"/>
+        <Class IRI="github_issue"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_organization_is_joined"/>
+        <Class IRI="github_organization_join_event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_organization_joined_by"/>
+        <Class IRI="github_organization_join_event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_owner_of"/>
+        <Class IRI="github_user"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_project_has_milestone"/>
+        <Class IRI="github_project"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_project_joined"/>
+        <Class IRI="github_project_join_event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_project_joining_user"/>
+        <Class IRI="github_project_join_event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_project_language_is"/>
+        <Class IRI="github_project_language"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_project_language_repo"/>
+        <Class IRI="github_project_language"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_pull_request_action_id"/>
+        <Class IRI="github_pull_request_action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_pull_request_action_pull_request"/>
+        <Class IRI="github_pull_request_action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_pull_request_action_type"/>
+        <Class IRI="github_pull_request_action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_repo_label_name"/>
+        <Class IRI="github_repo_label"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_repo_label_project"/>
+        <Class IRI="github_repo_label"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_user_city"/>
+        <Class IRI="github_user"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="github_user_state"/>
+        <Class IRI="github_user"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has_authored_comment"/>
+        <Class IRI="user"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has_authored_commit"/>
+        <Class IRI="user"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="has_committed_commit"/>
+        <Class IRI="user"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="pull_request_base_commit"/>
+        <Class IRI="pull_request"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="pull_request_base_project"/>
+        <Class IRI="pull_request"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="pull_request_has_commit"/>
+        <Class IRI="pull_request"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="pull_request_head_commit"/>
+        <Class IRI="pull_request"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="pull_request_head_project"/>
+        <Class IRI="pull_request"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="pull_request_user"/>
+        <Class IRI="pull_request"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="repository_has_commit"/>
+        <Class IRI="repository"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="comment_author"/>
+        <Class IRI="user"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="comment_for"/>
+        <Class IRI="commentable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="commit_author"/>
+        <Class IRI="user"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="commit_belongs_to_repository"/>
+        <Class IRI="repository"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="commit_commited_by"/>
+        <Class IRI="user"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="commit_has_parent"/>
+        <Class IRI="commit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_follower"/>
+        <Class IRI="github_user"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_follows"/>
+        <Class IRI="followable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_forked_from"/>
+        <Class IRI="github_project"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_has_owner"/>
+        <Class IRI="github_user"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_issue_assignee"/>
+        <Class IRI="github_user"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_issue_event_actor"/>
+        <Class IRI="github_user"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_issue_event_for"/>
+        <Class IRI="github_issue"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_issue_label_used_by"/>
+        <Class IRI="github_issue"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_issue_project"/>
+        <Class IRI="github_project"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_issue_pull_request"/>
+        <Class IRI="github_pull_request"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_issue_reporter"/>
+        <Class IRI="github_user"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_organization_is_joined"/>
+        <Class IRI="github_user"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_organization_joined_by"/>
+        <Class IRI="github_user"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_owner_of"/>
+        <Class IRI="github_project"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_project_has_milestone"/>
+        <Class IRI="github_project_milestone"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_project_joined"/>
+        <Class IRI="github_project"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_project_joining_user"/>
+        <Class IRI="github_user"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_project_language_is"/>
+        <Class IRI="programming_language"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_project_language_repo"/>
+        <Class IRI="github_project"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_pull_request_action_id"/>
+        <Class abbreviatedIRI="rdfs:Datatype"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_pull_request_action_pull_request"/>
+        <Class IRI="github_pull_request"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_pull_request_action_type"/>
+        <Class abbreviatedIRI="rdfs:Datatype"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_repo_label_name"/>
+        <Class abbreviatedIRI="rdfs:Datatype"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_repo_label_project"/>
+        <Class IRI="github_project"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_user_city"/>
+        <Class abbreviatedIRI="dbo:City"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="github_user_state"/>
+        <Class abbreviatedIRI="dbo:State"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has_authored_comment"/>
+        <Class IRI="comment"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has_authored_commit"/>
+        <Class IRI="commit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="has_committed_commit"/>
+        <Class IRI="commit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="pull_request_base_commit"/>
+        <Class IRI="commit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="pull_request_base_project"/>
+        <Class IRI="repository"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="pull_request_has_commit"/>
+        <Class IRI="commit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="pull_request_head_commit"/>
+        <Class IRI="commit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="pull_request_head_project"/>
+        <Class IRI="repository"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="pull_request_user"/>
+        <Class IRI="user"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="repository_has_commit"/>
+        <Class IRI="commit"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="comment_body"/>
+        <Class IRI="comment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="comment_created_at"/>
+        <Class IRI="comment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="comment_line"/>
+        <Class IRI="comment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="comment_pos"/>
+        <Class IRI="comment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="commit_created_at"/>
+        <Class IRI="commit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="commit_message"/>
+        <Class IRI="commit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="commit_sha"/>
+        <Class IRI="commit"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_following_since"/>
+        <Class IRI="github_follow_event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_issue_created_at"/>
+        <Class IRI="github_issue"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_issue_event_action"/>
+        <Class IRI="github_issue_event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_issue_event_action_specific_sha"/>
+        <Class IRI="github_issue_event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_issue_event_created_at"/>
+        <Class IRI="github_issue_event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_organization_joined_at"/>
+        <Class IRI="github_organization_join_event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_project_deleted"/>
+        <Class IRI="github_project"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_project_description"/>
+        <Class IRI="github_project"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_project_join_event_created_at"/>
+        <Class IRI="github_project_join_event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_project_language_bytes"/>
+        <Class IRI="github_project_language"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_project_language_timestamp"/>
+        <Class IRI="github_project_language"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_project_milestone_name"/>
+        <Class IRI="github_project_milestone"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_project_name"/>
+        <Class IRI="github_project"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_pull_request_action_created_at"/>
+        <Class IRI="github_pull_request_action"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_pull_request_id"/>
+        <Class IRI="github_pull_request"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_pull_request_intra_branch"/>
+        <Class IRI="github_pull_request"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_pull_request_merged"/>
+        <Class IRI="github_pull_request"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_user_company"/>
+        <Class IRI="github_user"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_user_country_code"/>
+        <Class IRI="github_user"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_user_created_at"/>
+        <Class IRI="github_user"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_user_deleted"/>
+        <Class IRI="github_user"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_user_fake"/>
+        <Class IRI="github_user"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_user_is_org"/>
+        <Class IRI="github_user"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_user_lat"/>
+        <Class IRI="github_user"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_user_lng"/>
+        <Class IRI="github_user"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_user_location"/>
+        <Class IRI="github_user"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_user_login"/>
+        <Class IRI="github_user"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_user_or_project"/>
+        <Class IRI="github_follow_event"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="programming_language_name"/>
+        <Class IRI="programming_language"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="repository_created_at"/>
+        <Class IRI="repository"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="repository_url"/>
+        <Class IRI="repository"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="user_email"/>
+        <Class IRI="user"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="comment_body"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="comment_created_at"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="comment_line"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="comment_pos"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="commit_created_at"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="commit_message"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="commit_sha"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_following_since"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_issue_created_at"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_issue_event_action"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_issue_event_action_specific_sha"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_issue_event_created_at"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_organization_joined_at"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_project_deleted"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_project_description"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_project_join_event_created_at"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_project_language_bytes"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_project_language_timestamp"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_project_milestone_name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_project_name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_pull_request_action_created_at"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_pull_request_id"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_pull_request_intra_branch"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_pull_request_merged"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_user_company"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_user_country_code"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_user_created_at"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_user_deleted"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_user_fake"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_user_is_org"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_user_lat"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_user_lng"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_user_location"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_user_login"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_user_or_project"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="programming_language_name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="repository_created_at"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="repository_url"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="user_email"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dbo:City</AbbreviatedIRI>
+        <Literal xml:lang="iri-based">City</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>dbo:State</AbbreviatedIRI>
+        <Literal xml:lang="iri-based">State</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comment</IRI>
+        <Literal xml:lang="en">comment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comment</IRI>
+        <Literal xml:lang="iri-based">comment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comment_author</IRI>
+        <Literal xml:lang="en">comment_author</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comment_author</IRI>
+        <Literal xml:lang="iri-based">comment_author</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comment_body</IRI>
+        <Literal xml:lang="en">comment_body</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comment_body</IRI>
+        <Literal xml:lang="iri-based">comment_body</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comment_created_at</IRI>
+        <Literal xml:lang="en">comment_created_at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comment_created_at</IRI>
+        <Literal xml:lang="iri-based">comment_created_at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comment_for</IRI>
+        <Literal xml:lang="en">comment_for</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comment_for</IRI>
+        <Literal xml:lang="iri-based">comment_for</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comment_line</IRI>
+        <Literal xml:lang="en">comment_line</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comment_line</IRI>
+        <Literal xml:lang="iri-based">comment_line</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comment_pos</IRI>
+        <Literal xml:lang="en">comment_pos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>comment_pos</IRI>
+        <Literal xml:lang="iri-based">comment_pos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>commentable</IRI>
+        <Literal xml:lang="en">commentable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>commentable</IRI>
+        <Literal xml:lang="iri-based">commentable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>commit</IRI>
+        <Literal xml:lang="en">commit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>commit</IRI>
+        <Literal xml:lang="iri-based">commit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>commit_author</IRI>
+        <Literal xml:lang="en">commit_author</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>commit_author</IRI>
+        <Literal xml:lang="iri-based">commit_author</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>commit_belongs_to_repository</IRI>
+        <Literal xml:lang="en">commit_belongs_to_repository</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>commit_belongs_to_repository</IRI>
+        <Literal xml:lang="iri-based">commit_belongs_to_repository</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>commit_commited_by</IRI>
+        <Literal xml:lang="en">commit_commited_by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>commit_commited_by</IRI>
+        <Literal xml:lang="iri-based">commit_commited_by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>commit_created_at</IRI>
+        <Literal xml:lang="en">commit_created_at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>commit_created_at</IRI>
+        <Literal xml:lang="iri-based">commit_created_at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>commit_has_parent</IRI>
+        <Literal xml:lang="en">commit_has_parent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>commit_has_parent</IRI>
+        <Literal xml:lang="iri-based">commit_has_parent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>commit_message</IRI>
+        <Literal xml:lang="en">commit_message</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>commit_message</IRI>
+        <Literal xml:lang="iri-based">commit_message</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>commit_sha</IRI>
+        <Literal xml:lang="en">commit_sha</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>commit_sha</IRI>
+        <Literal xml:lang="iri-based">commit_sha</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>followable</IRI>
+        <Literal xml:lang="en">followable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>followable</IRI>
+        <Literal xml:lang="iri-based">followable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_commit</IRI>
+        <Literal xml:lang="en">github_commit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_commit</IRI>
+        <Literal xml:lang="iri-based">github_commit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_follow_event</IRI>
+        <Literal xml:lang="en">github_follow_event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_follow_event</IRI>
+        <Literal xml:lang="iri-based">github_follow_event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_follower</IRI>
+        <Literal xml:lang="en">github_follower</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_follower</IRI>
+        <Literal xml:lang="iri-based">github_follower</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_following_since</IRI>
+        <Literal xml:lang="en">github_following_since</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_following_since</IRI>
+        <Literal xml:lang="iri-based">github_following_since</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_follows</IRI>
+        <Literal xml:lang="en">github_follows</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_follows</IRI>
+        <Literal xml:lang="iri-based">github_follows</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_forked_from</IRI>
+        <Literal xml:lang="en">github_forked_from</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_forked_from</IRI>
+        <Literal xml:lang="iri-based">github_forked_from</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_has_owner</IRI>
+        <Literal xml:lang="en">github_has_owner</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_has_owner</IRI>
+        <Literal xml:lang="iri-based">github_has_owner</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue</IRI>
+        <Literal xml:lang="en">github_issue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue</IRI>
+        <Literal xml:lang="iri-based">github_issue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_assignee</IRI>
+        <Literal xml:lang="en">github_issue_assignee</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_assignee</IRI>
+        <Literal xml:lang="iri-based">github_issue_assignee</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_created_at</IRI>
+        <Literal xml:lang="en">github_issue_created_at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_created_at</IRI>
+        <Literal xml:lang="iri-based">github_issue_created_at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_event</IRI>
+        <Literal xml:lang="en">github_issue_event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_event</IRI>
+        <Literal xml:lang="iri-based">github_issue_event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_event_action</IRI>
+        <Literal xml:lang="en">github_issue_event_action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_event_action</IRI>
+        <Literal xml:lang="iri-based">github_issue_event_action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_event_action_specific_sha</IRI>
+        <Literal xml:lang="en">github_issue_event_action_specific_sha</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_event_action_specific_sha</IRI>
+        <Literal xml:lang="iri-based">github_issue_event_action_specific_sha</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_event_actor</IRI>
+        <Literal xml:lang="en">github_issue_event_actor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_event_actor</IRI>
+        <Literal xml:lang="iri-based">github_issue_event_actor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_event_created_at</IRI>
+        <Literal xml:lang="en">github_issue_event_created_at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_event_created_at</IRI>
+        <Literal xml:lang="iri-based">github_issue_event_created_at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_event_for</IRI>
+        <Literal xml:lang="en">github_issue_event_for</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_event_for</IRI>
+        <Literal xml:lang="iri-based">github_issue_event_for</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_label_used_by</IRI>
+        <Literal xml:lang="en">github_issue_label_used_by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_label_used_by</IRI>
+        <Literal xml:lang="iri-based">github_issue_label_used_by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_project</IRI>
+        <Literal xml:lang="en">github_issue_project</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_project</IRI>
+        <Literal xml:lang="iri-based">github_issue_project</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_pull_request</IRI>
+        <Literal xml:lang="en">github_issue_pull_request</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_pull_request</IRI>
+        <Literal xml:lang="iri-based">github_issue_pull_request</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_reporter</IRI>
+        <Literal xml:lang="en">github_issue_reporter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_issue_reporter</IRI>
+        <Literal xml:lang="iri-based">github_issue_reporter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_organization_is_joined</IRI>
+        <Literal xml:lang="en">github_organization_is_joined</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_organization_is_joined</IRI>
+        <Literal xml:lang="iri-based">github_organization_is_joined</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_organization_join_event</IRI>
+        <Literal xml:lang="en">github_organization_join_event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_organization_join_event</IRI>
+        <Literal xml:lang="iri-based">github_organization_join_event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_organization_joined_at</IRI>
+        <Literal xml:lang="en">github_organization_joined_at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_organization_joined_at</IRI>
+        <Literal xml:lang="iri-based">github_organization_joined_at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_organization_joined_by</IRI>
+        <Literal xml:lang="en">github_organiszation_joined_by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_organization_joined_by</IRI>
+        <Literal xml:lang="iri-based">github_organization_joined_by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project</IRI>
+        <Literal xml:lang="en">github_project</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project</IRI>
+        <Literal xml:lang="iri-based">github_project</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_deleted</IRI>
+        <Literal xml:lang="en">github_project_deleted</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_deleted</IRI>
+        <Literal xml:lang="iri-based">github_project_deleted</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_description</IRI>
+        <Literal xml:lang="en">github_project_description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_description</IRI>
+        <Literal xml:lang="iri-based">github_project_description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_has_milestone</IRI>
+        <Literal xml:lang="en">github_project_has_milestone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_has_milestone</IRI>
+        <Literal xml:lang="iri-based">github_project_has_milestone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_join_event</IRI>
+        <Literal xml:lang="en">github_project_join_event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_join_event</IRI>
+        <Literal xml:lang="iri-based">github_project_join_event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_join_event_created_at</IRI>
+        <Literal xml:lang="en">github_project_join_event_created_at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_join_event_created_at</IRI>
+        <Literal xml:lang="iri-based">github_project_join_event_created_at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_joined</IRI>
+        <Literal xml:lang="en">github_project_joined</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_joined</IRI>
+        <Literal xml:lang="iri-based">github_project_joined</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_joining_user</IRI>
+        <Literal xml:lang="en">github_project_joining_user</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_joining_user</IRI>
+        <Literal xml:lang="iri-based">github_project_joining_user</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_language</IRI>
+        <Literal xml:lang="en">github_project_language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_language</IRI>
+        <Literal xml:lang="iri-based">github_project_language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_language_bytes</IRI>
+        <Literal xml:lang="en">github_project_language_bytes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_language_bytes</IRI>
+        <Literal xml:lang="iri-based">github_project_language_bytes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_language_is</IRI>
+        <Literal xml:lang="en">github_project_language_is</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_language_is</IRI>
+        <Literal xml:lang="iri-based">github_project_language_is</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_language_repo</IRI>
+        <Literal xml:lang="en">github_project_language_repo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_language_repo</IRI>
+        <Literal xml:lang="iri-based">github_project_language_repo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_language_timestamp</IRI>
+        <Literal xml:lang="en">github_project_language_timestamp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_language_timestamp</IRI>
+        <Literal xml:lang="iri-based">github_project_language_timestamp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_milestone</IRI>
+        <Literal xml:lang="en">github_project_milestone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_milestone</IRI>
+        <Literal xml:lang="iri-based">github_project_milestone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_milestone_name</IRI>
+        <Literal xml:lang="en">github_project_milestone_name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_milestone_name</IRI>
+        <Literal xml:lang="iri-based">github_project_milestone_name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_name</IRI>
+        <Literal xml:lang="en">github_project_name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_project_name</IRI>
+        <Literal xml:lang="iri-based">github_project_name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_pull_request</IRI>
+        <Literal xml:lang="en">github_pull_request</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_pull_request</IRI>
+        <Literal xml:lang="iri-based">github_pull_request</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_pull_request_action</IRI>
+        <Literal xml:lang="en">github_pull_request_action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_pull_request_action</IRI>
+        <Literal xml:lang="iri-based">github_pull_request_action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_pull_request_action_created_at</IRI>
+        <Literal xml:lang="en">github_pull_request_action_created_at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_pull_request_action_created_at</IRI>
+        <Literal xml:lang="iri-based">github_pull_request_action_created_at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_pull_request_action_id</IRI>
+        <Literal xml:lang="en">github_pull_request_action_id</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_pull_request_action_id</IRI>
+        <Literal xml:lang="iri-based">github_pull_request_action_id</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_pull_request_action_pull_request</IRI>
+        <Literal xml:lang="en">github_pull_request_action_pull_request</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_pull_request_action_pull_request</IRI>
+        <Literal xml:lang="iri-based">github_pull_request_action_pull_request</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_pull_request_action_type</IRI>
+        <Literal xml:lang="en">github_pull_request_action_type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_pull_request_action_type</IRI>
+        <Literal xml:lang="iri-based">github_pull_request_action_type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_pull_request_id</IRI>
+        <Literal xml:lang="en">github_pull_request_id</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_pull_request_id</IRI>
+        <Literal xml:lang="iri-based">github_pull_request_id</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_pull_request_intra_branch</IRI>
+        <Literal xml:lang="en">github_pull_request_intra_branch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_pull_request_intra_branch</IRI>
+        <Literal xml:lang="iri-based">github_pull_request_intra_branch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_pull_request_merged</IRI>
+        <Literal xml:lang="en">github_pull_request_merged</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_pull_request_merged</IRI>
+        <Literal xml:lang="iri-based">github_pull_request_merged</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_repo_label</IRI>
+        <Literal xml:lang="en">github_repo_label</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_repo_label</IRI>
+        <Literal xml:lang="iri-based">github_repo_label</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_repo_label_name</IRI>
+        <Literal xml:lang="en">github_repo_label_name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_repo_label_name</IRI>
+        <Literal xml:lang="iri-based">github_repo_label_name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_repo_label_project</IRI>
+        <Literal xml:lang="en">github_repo_label_project</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_repo_label_project</IRI>
+        <Literal xml:lang="iri-based">github_repo_label_project</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user</IRI>
+        <Literal xml:lang="en">github_user</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user</IRI>
+        <Literal xml:lang="iri-based">github_user</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_city</IRI>
+        <Literal xml:lang="en">github_user_city</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_city</IRI>
+        <Literal xml:lang="iri-based">github_user_city</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_company</IRI>
+        <Literal xml:lang="en">github_user_company</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_company</IRI>
+        <Literal xml:lang="iri-based">github_user_company</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_country_code</IRI>
+        <Literal xml:lang="en">github_user_country_code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_country_code</IRI>
+        <Literal xml:lang="iri-based">github_user_country_code</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_created_at</IRI>
+        <Literal xml:lang="en">github_user_created_at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_created_at</IRI>
+        <Literal xml:lang="iri-based">github_user_created_at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_deleted</IRI>
+        <Literal xml:lang="en">github_user_deleted</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_deleted</IRI>
+        <Literal xml:lang="iri-based">github_user_deleted</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_fake</IRI>
+        <Literal xml:lang="en">github_user_fake</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_fake</IRI>
+        <Literal xml:lang="iri-based">github_user_fake</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_is_org</IRI>
+        <Literal xml:lang="en">github_user_is_org</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_is_org</IRI>
+        <Literal xml:lang="iri-based">github_user_is_org</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_lat</IRI>
+        <Literal xml:lang="en">github_user_lat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_lat</IRI>
+        <Literal xml:lang="iri-based">github_user_lat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_lng</IRI>
+        <Literal xml:lang="en">github_user_lng</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_lng</IRI>
+        <Literal xml:lang="iri-based">github_user_lng</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_location</IRI>
+        <Literal xml:lang="en">github_user_location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_location</IRI>
+        <Literal xml:lang="iri-based">github_user_location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_login</IRI>
+        <Literal xml:lang="en">github_user_login</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_login</IRI>
+        <Literal xml:lang="iri-based">github_user_login</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_or_project</IRI>
+        <Literal xml:lang="en">github_user_or_project</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_or_project</IRI>
+        <Literal xml:lang="iri-based">github_user_or_project</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_state</IRI>
+        <Literal xml:lang="en">github_user_state</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>github_user_state</IRI>
+        <Literal xml:lang="iri-based">github_user_state</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>programming_language</IRI>
+        <Literal xml:lang="en">programming_language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>programming_language</IRI>
+        <Literal xml:lang="iri-based">programming_language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>programming_language_name</IRI>
+        <Literal xml:lang="en">programming_language_name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>programming_language_name</IRI>
+        <Literal xml:lang="iri-based">programming_language_name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>pull_request</IRI>
+        <Literal xml:lang="en">pull_request</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>pull_request</IRI>
+        <Literal xml:lang="iri-based">pull_request</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>pull_request_base_commit</IRI>
+        <Literal xml:lang="en">pull_request_base_commit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>pull_request_base_commit</IRI>
+        <Literal xml:lang="iri-based">pull_request_base_commit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>pull_request_base_project</IRI>
+        <Literal xml:lang="en">pull_request_base_project</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>pull_request_base_project</IRI>
+        <Literal xml:lang="iri-based">pull_request_base_project</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>pull_request_has_commit</IRI>
+        <Literal xml:lang="en">pull_request_has_commit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>pull_request_has_commit</IRI>
+        <Literal xml:lang="iri-based">pull_request_has_commit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>pull_request_head_commit</IRI>
+        <Literal xml:lang="en">pull_request_head_commit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>pull_request_head_commit</IRI>
+        <Literal xml:lang="iri-based">pull_request_head_commit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>pull_request_head_project</IRI>
+        <Literal xml:lang="en">pull_request_head_project</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>pull_request_head_project</IRI>
+        <Literal xml:lang="iri-based">pull_request_head_project</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>pull_request_user</IRI>
+        <Literal xml:lang="en">pull_request_user</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>pull_request_user</IRI>
+        <Literal xml:lang="iri-based">pull_request_user</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>repository</IRI>
+        <Literal xml:lang="en">repository</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>repository</IRI>
+        <Literal xml:lang="iri-based">repository</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>repository_created_at</IRI>
+        <Literal xml:lang="en">repository_created_at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>repository_created_at</IRI>
+        <Literal xml:lang="iri-based">repository_created_at</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>repository_url</IRI>
+        <Literal xml:lang="en">repository_url</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>repository_url</IRI>
+        <Literal xml:lang="iri-based">repository_url</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>user</IRI>
+        <Literal xml:lang="en">user</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>user</IRI>
+        <Literal xml:lang="iri-based">user</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>user_email</IRI>
+        <Literal xml:lang="en">user_email</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>user_email</IRI>
+        <Literal xml:lang="iri-based">user_email</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>rdfs:Datatype</AbbreviatedIRI>
+        <Literal xml:lang="iri-based">Datatype</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
