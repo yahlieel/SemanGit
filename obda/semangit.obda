@@ -15,7 +15,7 @@ target		:user/{id} a :user ; :github_user_login {login}^^xsd:string ; :github_us
 source		select id, login, company, created_at, fake, deleted, `long`, lat, country_code, state, city, location from users
 
 mappingId	ProjectMap
-target		:repository/{id} a :repository ; :repository_url {url}^^xsd:anyURI ; :github_has_owner :user/{owner_id} ; :github_project_name {name} ; :github_project_description {description} ; :repository_created_at {created_at}^^xsd:dateTime ; :github_forked_from :repository/{forked_from} ; :github_project_deleted {deleted}^^xsd:boolean . 
+target		:repository/{id} a :repository ; :repository_url {url}^^xsd:anyURI ; :github_has_owner :user/{owner_id} ; :github_project_name {name}^^xsd:string ; :github_project_description {description}^^xsd:string ; :repository_created_at {created_at}^^xsd:dateTime ; :github_forked_from :repository/{forked_from} ; :github_project_deleted {deleted}^^xsd:boolean . 
 source		select id, url, owner_id, name, description, created_at, forked_from, deleted from projects
 
 mappingId	PullRequestMap
@@ -31,7 +31,7 @@ target		:commit/{id} :commit_commited_by :user/{committer_id} .
 source		select id, committer_id from commits
 
 mappingId	PullRequestCommentMap
-target		:comment/{comment_id} a :comment ; :comment_for :pull_request/{pull_request_id} , :commit/{commit_id} ; :comment_author :user/{user_id} ; :comment_body {body}^^xsd:string ; :comment_pos {position}^^xsd:integer ; :comment_created_at {created_at}^^xsd:dateTime . 
+target		:comment/{comment_id} a :comment ; :comment_for :pull_request/{pull_request_id} ; :comment_author :user/{user_id} ; :comment_body {body}^^xsd:string ; :comment_pos {position}^^xsd:integer ; :comment_created_at {created_at}^^xsd:dateTime . 
 source		select comment_id, pull_request_id, commit_id, user_id, body, position, created_at from pull_request_comments
 
 mappingId	PullRequestHistoryMap
@@ -73,5 +73,9 @@ source		select * from pull_request_history where action = 'merged'
 mappingId	PullRequestUserMap
 target		:pull_request/{pull_request_id} a :pull_request ; :pull_request_user :user/{actor_id} . 
 source		select * from pull_request_history
+
+mappingId	CommitCommentMap
+target		:comment/{comment_id} a :comment ; :comment_for :commit/{commit_id} ; :comment_author :user/{user_id} ; :comment_body {body}^^xsd:string ; :comment_pos {position}^^xsd:integer ; :comment_created_at {created_at}^^xsd:dateTime . 
+source		select comment_id, commit_id, user_id, body, position, created_at from commit_comments
 ]]
 
