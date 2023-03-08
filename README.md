@@ -16,7 +16,7 @@ Note: The links to other submodules posted here will lead you to the latest stab
 To download everything you can use following commands in your git console:
 
 ```sh
-$ git clone --recurse-submodules -j8 git://github.com/SemanGit/SemanGit.git
+$ git clone --recurse-submodules -j8 git://github.com/yahlieel/SemanGit.git
 ```
 
 This fork contains extensions to the original SemanGit ontology that is used in experiments for Ontology-based data access on the GHTorrent MySQL dataset using Ontop.
