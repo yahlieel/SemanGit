@@ -185,9 +185,6 @@
         <ObjectProperty IRI="github_pull_request_action_pull_request"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="github_pull_request_action_type"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="github_repo_label_name"/>
     </Declaration>
     <Declaration>
@@ -291,6 +288,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="github_pull_request_action_created_at"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="github_pull_request_action_type"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="github_pull_request_id"/>
@@ -603,10 +603,6 @@
         <Class IRI="github_pull_request_action"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="github_pull_request_action_type"/>
-        <Class IRI="github_pull_request_action"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="github_repo_label_name"/>
         <Class IRI="github_repo_label"/>
     </ObjectPropertyDomain>
@@ -771,10 +767,6 @@
         <Class IRI="github_pull_request"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="github_pull_request_action_type"/>
-        <Class abbreviatedIRI="rdfs:Datatype"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="github_repo_label_name"/>
         <Class abbreviatedIRI="rdfs:Datatype"/>
     </ObjectPropertyRange>
@@ -912,6 +904,10 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="github_pull_request_action_created_at"/>
+        <Class IRI="github_pull_request_action"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="github_pull_request_action_type"/>
         <Class IRI="github_pull_request_action"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -1069,6 +1065,10 @@
     <DataPropertyRange>
         <DataProperty IRI="github_pull_request_action_created_at"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="github_pull_request_action_type"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="github_pull_request_id"/>
@@ -1771,16 +1771,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>github_pull_request_action_pull_request</IRI>
         <Literal xml:lang="iri-based">github_pull_request_action_pull_request</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>github_pull_request_action_type</IRI>
-        <Literal xml:lang="en">github_pull_request_action_type</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>github_pull_request_action_type</IRI>
-        <Literal xml:lang="iri-based">github_pull_request_action_type</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
