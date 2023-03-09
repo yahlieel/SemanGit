@@ -1,0 +1,775 @@
+<http://visualdataweb.org/semangit/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://visualdataweb.org/semangit/> <http://purl.org/dc/elements/1.1/#creator> "Dennis Kubitza, Matthias Böckmann" .
+<http://visualdataweb.org/semangit/> <http://purl.org/dc/elements/1.1/#description> "An onthology for git"@en .
+<http://visualdataweb.org/semangit/> <http://purl.org/dc/elements/1.1/#title> "SemanGit"@en .
+<http://visualdataweb.org/semangit/> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/#creator
+<http://purl.org/dc/elements/1.1/#creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/#description
+<http://purl.org/dc/elements/1.1/#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/#title
+<http://purl.org/dc/elements/1.1/#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://visualdataweb.org/semangit/comment_author
+<http://visualdataweb.org/semangit/comment_author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/comment_author> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/comment> .
+<http://visualdataweb.org/semangit/comment_author> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/user> .
+<http://visualdataweb.org/semangit/comment_author> <http://www.w3.org/2000/01/rdf-schema#label> "comment_author"@en .
+<http://visualdataweb.org/semangit/comment_author> <http://www.w3.org/2000/01/rdf-schema#label> "comment_author"@iri-based .
+# 
+# http://visualdataweb.org/semangit/comment_for
+<http://visualdataweb.org/semangit/comment_for> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/comment_for> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/comment> .
+<http://visualdataweb.org/semangit/comment_for> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/commentable> .
+<http://visualdataweb.org/semangit/comment_for> <http://www.w3.org/2000/01/rdf-schema#label> "comment_for"@en .
+<http://visualdataweb.org/semangit/comment_for> <http://www.w3.org/2000/01/rdf-schema#label> "comment_for"@iri-based .
+# 
+# http://visualdataweb.org/semangit/commit_author
+<http://visualdataweb.org/semangit/commit_author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/commit_author> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/commit> .
+<http://visualdataweb.org/semangit/commit_author> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/user> .
+<http://visualdataweb.org/semangit/commit_author> <http://www.w3.org/2000/01/rdf-schema#label> "commit_author"@en .
+<http://visualdataweb.org/semangit/commit_author> <http://www.w3.org/2000/01/rdf-schema#label> "commit_author"@iri-based .
+# 
+# http://visualdataweb.org/semangit/commit_belongs_to_repository
+<http://visualdataweb.org/semangit/commit_belongs_to_repository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/commit_belongs_to_repository> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/commit> .
+<http://visualdataweb.org/semangit/commit_belongs_to_repository> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/repository> .
+<http://visualdataweb.org/semangit/commit_belongs_to_repository> <http://www.w3.org/2000/01/rdf-schema#label> "commit_belongs_to_repository"@en .
+<http://visualdataweb.org/semangit/commit_belongs_to_repository> <http://www.w3.org/2000/01/rdf-schema#label> "commit_belongs_to_repository"@iri-based .
+# 
+# http://visualdataweb.org/semangit/commit_commited_by
+<http://visualdataweb.org/semangit/commit_commited_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/commit_commited_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/commit> .
+<http://visualdataweb.org/semangit/commit_commited_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/user> .
+<http://visualdataweb.org/semangit/commit_commited_by> <http://www.w3.org/2000/01/rdf-schema#label> "commit_commited_by"@en .
+<http://visualdataweb.org/semangit/commit_commited_by> <http://www.w3.org/2000/01/rdf-schema#label> "commit_commited_by"@iri-based .
+# 
+# http://visualdataweb.org/semangit/commit_has_parent
+<http://visualdataweb.org/semangit/commit_has_parent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/commit_has_parent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/commit> .
+<http://visualdataweb.org/semangit/commit_has_parent> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/commit> .
+<http://visualdataweb.org/semangit/commit_has_parent> <http://www.w3.org/2000/01/rdf-schema#label> "commit_has_parent"@en .
+<http://visualdataweb.org/semangit/commit_has_parent> <http://www.w3.org/2000/01/rdf-schema#label> "commit_has_parent"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_follower
+<http://visualdataweb.org/semangit/github_follower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_follower> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_follow_event> .
+<http://visualdataweb.org/semangit/github_follower> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_follower> <http://www.w3.org/2000/01/rdf-schema#label> "github_follower"@en .
+<http://visualdataweb.org/semangit/github_follower> <http://www.w3.org/2000/01/rdf-schema#label> "github_follower"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_follows
+<http://visualdataweb.org/semangit/github_follows> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_follows> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_follow_event> .
+<http://visualdataweb.org/semangit/github_follows> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/followable> .
+<http://visualdataweb.org/semangit/github_follows> <http://www.w3.org/2000/01/rdf-schema#label> "github_follows"@en .
+<http://visualdataweb.org/semangit/github_follows> <http://www.w3.org/2000/01/rdf-schema#label> "github_follows"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_forked_from
+<http://visualdataweb.org/semangit/github_forked_from> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_forked_from> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_project> .
+<http://visualdataweb.org/semangit/github_forked_from> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/github_project> .
+<http://visualdataweb.org/semangit/github_forked_from> <http://www.w3.org/2000/01/rdf-schema#label> "github_forked_from"@en .
+<http://visualdataweb.org/semangit/github_forked_from> <http://www.w3.org/2000/01/rdf-schema#label> "github_forked_from"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_has_owner
+<http://visualdataweb.org/semangit/github_has_owner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_has_owner> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_project> .
+<http://visualdataweb.org/semangit/github_has_owner> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_has_owner> <http://www.w3.org/2000/01/rdf-schema#label> "github_has_owner"@en .
+<http://visualdataweb.org/semangit/github_has_owner> <http://www.w3.org/2000/01/rdf-schema#label> "github_has_owner"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_issue_assignee
+<http://visualdataweb.org/semangit/github_issue_assignee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_issue_assignee> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_issue> .
+<http://visualdataweb.org/semangit/github_issue_assignee> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_issue_assignee> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_assignee"@en .
+<http://visualdataweb.org/semangit/github_issue_assignee> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_assignee"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_issue_event_actor
+<http://visualdataweb.org/semangit/github_issue_event_actor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_issue_event_actor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_issue_event> .
+<http://visualdataweb.org/semangit/github_issue_event_actor> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_issue_event_actor> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_event_actor"@en .
+<http://visualdataweb.org/semangit/github_issue_event_actor> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_event_actor"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_issue_event_for
+<http://visualdataweb.org/semangit/github_issue_event_for> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_issue_event_for> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_issue_event> .
+<http://visualdataweb.org/semangit/github_issue_event_for> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/github_issue> .
+<http://visualdataweb.org/semangit/github_issue_event_for> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_event_for"@en .
+<http://visualdataweb.org/semangit/github_issue_event_for> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_event_for"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_issue_label_used_by
+<http://visualdataweb.org/semangit/github_issue_label_used_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_issue_label_used_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_repo_label> .
+<http://visualdataweb.org/semangit/github_issue_label_used_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/github_issue> .
+<http://visualdataweb.org/semangit/github_issue_label_used_by> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_label_used_by"@en .
+<http://visualdataweb.org/semangit/github_issue_label_used_by> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_label_used_by"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_issue_project
+<http://visualdataweb.org/semangit/github_issue_project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_issue_project> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_issue> .
+<http://visualdataweb.org/semangit/github_issue_project> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/github_project> .
+<http://visualdataweb.org/semangit/github_issue_project> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_project"@en .
+<http://visualdataweb.org/semangit/github_issue_project> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_project"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_issue_pull_request
+<http://visualdataweb.org/semangit/github_issue_pull_request> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_issue_pull_request> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_issue> .
+<http://visualdataweb.org/semangit/github_issue_pull_request> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/github_pull_request> .
+<http://visualdataweb.org/semangit/github_issue_pull_request> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_pull_request"@en .
+<http://visualdataweb.org/semangit/github_issue_pull_request> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_pull_request"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_issue_reporter
+<http://visualdataweb.org/semangit/github_issue_reporter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_issue_reporter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_issue> .
+<http://visualdataweb.org/semangit/github_issue_reporter> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_issue_reporter> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_reporter"@en .
+<http://visualdataweb.org/semangit/github_issue_reporter> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_reporter"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_organization_is_joined
+<http://visualdataweb.org/semangit/github_organization_is_joined> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_organization_is_joined> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_organization_join_event> .
+<http://visualdataweb.org/semangit/github_organization_is_joined> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_organization_is_joined> <http://www.w3.org/2000/01/rdf-schema#label> "github_organization_is_joined"@en .
+<http://visualdataweb.org/semangit/github_organization_is_joined> <http://www.w3.org/2000/01/rdf-schema#label> "github_organization_is_joined"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_organization_joined_by
+<http://visualdataweb.org/semangit/github_organization_joined_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_organization_joined_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_organization_join_event> .
+<http://visualdataweb.org/semangit/github_organization_joined_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_organization_joined_by> <http://www.w3.org/2000/01/rdf-schema#label> "github_organiszation_joined_by"@en .
+<http://visualdataweb.org/semangit/github_organization_joined_by> <http://www.w3.org/2000/01/rdf-schema#label> "github_organization_joined_by"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_project_has_milestone
+<http://visualdataweb.org/semangit/github_project_has_milestone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_project_has_milestone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_project> .
+<http://visualdataweb.org/semangit/github_project_has_milestone> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/github_project_milestone> .
+<http://visualdataweb.org/semangit/github_project_has_milestone> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_has_milestone"@en .
+<http://visualdataweb.org/semangit/github_project_has_milestone> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_has_milestone"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_project_joined
+<http://visualdataweb.org/semangit/github_project_joined> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_project_joined> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_project_join_event> .
+<http://visualdataweb.org/semangit/github_project_joined> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/github_project> .
+<http://visualdataweb.org/semangit/github_project_joined> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_joined"@en .
+<http://visualdataweb.org/semangit/github_project_joined> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_joined"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_project_joining_user
+<http://visualdataweb.org/semangit/github_project_joining_user> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_project_joining_user> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_project_join_event> .
+<http://visualdataweb.org/semangit/github_project_joining_user> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_project_joining_user> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_joining_user"@en .
+<http://visualdataweb.org/semangit/github_project_joining_user> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_joining_user"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_project_language_is
+<http://visualdataweb.org/semangit/github_project_language_is> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_project_language_is> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_project_language> .
+<http://visualdataweb.org/semangit/github_project_language_is> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/programming_language> .
+<http://visualdataweb.org/semangit/github_project_language_is> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_language_is"@en .
+<http://visualdataweb.org/semangit/github_project_language_is> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_language_is"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_project_language_repo
+<http://visualdataweb.org/semangit/github_project_language_repo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_project_language_repo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_project_language> .
+<http://visualdataweb.org/semangit/github_project_language_repo> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/github_project> .
+<http://visualdataweb.org/semangit/github_project_language_repo> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_language_repo"@en .
+<http://visualdataweb.org/semangit/github_project_language_repo> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_language_repo"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_pull_request_action_id
+<http://visualdataweb.org/semangit/github_pull_request_action_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_pull_request_action_id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_pull_request_action> .
+<http://visualdataweb.org/semangit/github_pull_request_action_id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://visualdataweb.org/semangit/github_pull_request_action_id> <http://www.w3.org/2000/01/rdf-schema#label> "github_pull_request_action_id"@en .
+<http://visualdataweb.org/semangit/github_pull_request_action_id> <http://www.w3.org/2000/01/rdf-schema#label> "github_pull_request_action_id"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_pull_request_action_pull_request
+<http://visualdataweb.org/semangit/github_pull_request_action_pull_request> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_pull_request_action_pull_request> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_pull_request_action> .
+<http://visualdataweb.org/semangit/github_pull_request_action_pull_request> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/github_pull_request> .
+<http://visualdataweb.org/semangit/github_pull_request_action_pull_request> <http://www.w3.org/2000/01/rdf-schema#label> "github_pull_request_action_pull_request"@en .
+<http://visualdataweb.org/semangit/github_pull_request_action_pull_request> <http://www.w3.org/2000/01/rdf-schema#label> "github_pull_request_action_pull_request"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_pull_request_action_type
+<http://visualdataweb.org/semangit/github_pull_request_action_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_pull_request_action_type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_pull_request_action> .
+<http://visualdataweb.org/semangit/github_pull_request_action_type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://visualdataweb.org/semangit/github_pull_request_action_type> <http://www.w3.org/2000/01/rdf-schema#label> "github_pull_request_action_type"@en .
+<http://visualdataweb.org/semangit/github_pull_request_action_type> <http://www.w3.org/2000/01/rdf-schema#label> "github_pull_request_action_type"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_repo_label_name
+<http://visualdataweb.org/semangit/github_repo_label_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_repo_label_name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_repo_label> .
+<http://visualdataweb.org/semangit/github_repo_label_name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://visualdataweb.org/semangit/github_repo_label_name> <http://www.w3.org/2000/01/rdf-schema#label> "github_repo_label_name"@en .
+<http://visualdataweb.org/semangit/github_repo_label_name> <http://www.w3.org/2000/01/rdf-schema#label> "github_repo_label_name"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_repo_label_project
+<http://visualdataweb.org/semangit/github_repo_label_project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/github_repo_label_project> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_repo_label> .
+<http://visualdataweb.org/semangit/github_repo_label_project> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/github_project> .
+<http://visualdataweb.org/semangit/github_repo_label_project> <http://www.w3.org/2000/01/rdf-schema#label> "github_repo_label_project"@en .
+<http://visualdataweb.org/semangit/github_repo_label_project> <http://www.w3.org/2000/01/rdf-schema#label> "github_repo_label_project"@iri-based .
+# 
+# http://visualdataweb.org/semangit/gitlab_access_request_created_at
+<http://visualdataweb.org/semangit/gitlab_access_request_created_at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/gitlab_access_request_created_at> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/gitlab_access_request> .
+<http://visualdataweb.org/semangit/gitlab_access_request_created_at> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://visualdataweb.org/semangit/gitlab_access_request_requested_at
+<http://visualdataweb.org/semangit/gitlab_access_request_requested_at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/gitlab_access_request_requested_at> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/gitlab_access_request> .
+<http://visualdataweb.org/semangit/gitlab_access_request_requested_at> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://visualdataweb.org/semangit/gitlab_access_token_requested_by
+<http://visualdataweb.org/semangit/gitlab_access_token_requested_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/gitlab_access_token_requested_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/gitlab_access_request> .
+<http://visualdataweb.org/semangit/gitlab_access_token_requested_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/gitlab_user> .
+<http://visualdataweb.org/semangit/gitlab_access_token_requested_by> <http://www.w3.org/2000/01/rdf-schema#label> "gitlab_access_token_requested_by"@en .
+# 
+# http://visualdataweb.org/semangit/pull_request_base_commit
+<http://visualdataweb.org/semangit/pull_request_base_commit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/pull_request_base_commit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/pull_request> .
+<http://visualdataweb.org/semangit/pull_request_base_commit> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/commit> .
+<http://visualdataweb.org/semangit/pull_request_base_commit> <http://www.w3.org/2000/01/rdf-schema#label> "pull_request_base_commit"@en .
+<http://visualdataweb.org/semangit/pull_request_base_commit> <http://www.w3.org/2000/01/rdf-schema#label> "pull_request_base_commit"@iri-based .
+# 
+# http://visualdataweb.org/semangit/pull_request_base_project
+<http://visualdataweb.org/semangit/pull_request_base_project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/pull_request_base_project> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/pull_request> .
+<http://visualdataweb.org/semangit/pull_request_base_project> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/repository> .
+<http://visualdataweb.org/semangit/pull_request_base_project> <http://www.w3.org/2000/01/rdf-schema#label> "pull_request_base_project"@en .
+<http://visualdataweb.org/semangit/pull_request_base_project> <http://www.w3.org/2000/01/rdf-schema#label> "pull_request_base_project"@iri-based .
+# 
+# http://visualdataweb.org/semangit/pull_request_has_commit
+<http://visualdataweb.org/semangit/pull_request_has_commit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/pull_request_has_commit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/pull_request> .
+<http://visualdataweb.org/semangit/pull_request_has_commit> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/commit> .
+<http://visualdataweb.org/semangit/pull_request_has_commit> <http://www.w3.org/2000/01/rdf-schema#label> "pull_request_has_commit"@en .
+<http://visualdataweb.org/semangit/pull_request_has_commit> <http://www.w3.org/2000/01/rdf-schema#label> "pull_request_has_commit"@iri-based .
+# 
+# http://visualdataweb.org/semangit/pull_request_head_commit
+<http://visualdataweb.org/semangit/pull_request_head_commit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/pull_request_head_commit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/pull_request> .
+<http://visualdataweb.org/semangit/pull_request_head_commit> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/commit> .
+<http://visualdataweb.org/semangit/pull_request_head_commit> <http://www.w3.org/2000/01/rdf-schema#label> "pull_request_head_commit"@en .
+<http://visualdataweb.org/semangit/pull_request_head_commit> <http://www.w3.org/2000/01/rdf-schema#label> "pull_request_head_commit"@iri-based .
+# 
+# http://visualdataweb.org/semangit/pull_request_head_project
+<http://visualdataweb.org/semangit/pull_request_head_project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/pull_request_head_project> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/pull_request> .
+<http://visualdataweb.org/semangit/pull_request_head_project> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/repository> .
+<http://visualdataweb.org/semangit/pull_request_head_project> <http://www.w3.org/2000/01/rdf-schema#label> "pull_request_head_project"@en .
+<http://visualdataweb.org/semangit/pull_request_head_project> <http://www.w3.org/2000/01/rdf-schema#label> "pull_request_head_project"@iri-based .
+# 
+# http://visualdataweb.org/semangit/pull_request_user
+<http://visualdataweb.org/semangit/pull_request_user> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/pull_request_user> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/pull_request> .
+<http://visualdataweb.org/semangit/pull_request_user> <http://www.w3.org/2000/01/rdf-schema#range> <http://visualdataweb.org/semangit/user> .
+<http://visualdataweb.org/semangit/pull_request_user> <http://www.w3.org/2000/01/rdf-schema#label> "pull_request_user"@en .
+<http://visualdataweb.org/semangit/pull_request_user> <http://www.w3.org/2000/01/rdf-schema#label> "pull_request_user"@iri-based .
+# 
+# http://visualdataweb.org/semangit/repository_created_at
+<http://visualdataweb.org/semangit/repository_created_at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://visualdataweb.org/semangit/repository_created_at> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/repository> .
+<http://visualdataweb.org/semangit/repository_created_at> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://visualdataweb.org/semangit/comment_body
+<http://visualdataweb.org/semangit/comment_body> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/comment_body> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/comment> .
+<http://visualdataweb.org/semangit/comment_body> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://visualdataweb.org/semangit/comment_body> <http://www.w3.org/2000/01/rdf-schema#label> "comment_body"@en .
+<http://visualdataweb.org/semangit/comment_body> <http://www.w3.org/2000/01/rdf-schema#label> "comment_body"@iri-based .
+# 
+# http://visualdataweb.org/semangit/comment_created_at
+<http://visualdataweb.org/semangit/comment_created_at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/comment_created_at> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/comment> .
+<http://visualdataweb.org/semangit/comment_created_at> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://visualdataweb.org/semangit/comment_created_at> <http://www.w3.org/2000/01/rdf-schema#label> "comment_created_at"@en .
+<http://visualdataweb.org/semangit/comment_created_at> <http://www.w3.org/2000/01/rdf-schema#label> "comment_created_at"@iri-based .
+# 
+# http://visualdataweb.org/semangit/comment_line
+<http://visualdataweb.org/semangit/comment_line> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/comment_line> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/comment> .
+<http://visualdataweb.org/semangit/comment_line> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://visualdataweb.org/semangit/comment_line> <http://www.w3.org/2000/01/rdf-schema#label> "comment_line"@en .
+<http://visualdataweb.org/semangit/comment_line> <http://www.w3.org/2000/01/rdf-schema#label> "comment_line"@iri-based .
+# 
+# http://visualdataweb.org/semangit/comment_pos
+<http://visualdataweb.org/semangit/comment_pos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/comment_pos> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/comment> .
+<http://visualdataweb.org/semangit/comment_pos> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://visualdataweb.org/semangit/comment_pos> <http://www.w3.org/2000/01/rdf-schema#label> "comment_pos"@en .
+<http://visualdataweb.org/semangit/comment_pos> <http://www.w3.org/2000/01/rdf-schema#label> "comment_pos"@iri-based .
+# 
+# http://visualdataweb.org/semangit/commit_created_at
+<http://visualdataweb.org/semangit/commit_created_at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/commit_created_at> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/commit> .
+<http://visualdataweb.org/semangit/commit_created_at> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://visualdataweb.org/semangit/commit_created_at> <http://www.w3.org/2000/01/rdf-schema#label> "commit_created_at"@en .
+<http://visualdataweb.org/semangit/commit_created_at> <http://www.w3.org/2000/01/rdf-schema#label> "commit_created_at"@iri-based .
+# 
+# http://visualdataweb.org/semangit/commit_message
+<http://visualdataweb.org/semangit/commit_message> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/commit_message> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/commit> .
+<http://visualdataweb.org/semangit/commit_message> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://visualdataweb.org/semangit/commit_message> <http://www.w3.org/2000/01/rdf-schema#label> "commit_message"@en .
+<http://visualdataweb.org/semangit/commit_message> <http://www.w3.org/2000/01/rdf-schema#label> "commit_message"@iri-based .
+# 
+# http://visualdataweb.org/semangit/commit_sha
+<http://visualdataweb.org/semangit/commit_sha> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/commit_sha> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/commit> .
+<http://visualdataweb.org/semangit/commit_sha> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://visualdataweb.org/semangit/commit_sha> <http://www.w3.org/2000/01/rdf-schema#label> "commit_sha"@en .
+<http://visualdataweb.org/semangit/commit_sha> <http://www.w3.org/2000/01/rdf-schema#label> "commit_sha"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_company
+<http://visualdataweb.org/semangit/github_company> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_company> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_company> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://visualdataweb.org/semangit/github_company> <http://www.w3.org/2000/01/rdf-schema#label> "github_company"@en .
+<http://visualdataweb.org/semangit/github_company> <http://www.w3.org/2000/01/rdf-schema#label> "github_company"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_following_since
+<http://visualdataweb.org/semangit/github_following_since> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_following_since> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_follow_event> .
+<http://visualdataweb.org/semangit/github_following_since> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://visualdataweb.org/semangit/github_following_since> <http://www.w3.org/2000/01/rdf-schema#label> "github_following_since"@en .
+<http://visualdataweb.org/semangit/github_following_since> <http://www.w3.org/2000/01/rdf-schema#label> "github_following_since"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_issue_created_at
+<http://visualdataweb.org/semangit/github_issue_created_at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_issue_created_at> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_issue> .
+<http://visualdataweb.org/semangit/github_issue_created_at> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://visualdataweb.org/semangit/github_issue_created_at> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_created_at"@en .
+<http://visualdataweb.org/semangit/github_issue_created_at> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_created_at"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_issue_event_action
+<http://visualdataweb.org/semangit/github_issue_event_action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_issue_event_action> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_issue_event> .
+<http://visualdataweb.org/semangit/github_issue_event_action> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://visualdataweb.org/semangit/github_issue_event_action> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_event_action"@en .
+<http://visualdataweb.org/semangit/github_issue_event_action> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_event_action"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_issue_event_action_specific_sha
+<http://visualdataweb.org/semangit/github_issue_event_action_specific_sha> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_issue_event_action_specific_sha> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_issue_event> .
+<http://visualdataweb.org/semangit/github_issue_event_action_specific_sha> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://visualdataweb.org/semangit/github_issue_event_action_specific_sha> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_event_action_specific_sha"@en .
+<http://visualdataweb.org/semangit/github_issue_event_action_specific_sha> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_event_action_specific_sha"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_issue_event_created_at
+<http://visualdataweb.org/semangit/github_issue_event_created_at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_issue_event_created_at> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_issue_event> .
+<http://visualdataweb.org/semangit/github_issue_event_created_at> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://visualdataweb.org/semangit/github_issue_event_created_at> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_event_created_at"@en .
+<http://visualdataweb.org/semangit/github_issue_event_created_at> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_event_created_at"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_issue_id
+<http://visualdataweb.org/semangit/github_issue_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_issue_id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_issue> .
+<http://visualdataweb.org/semangit/github_issue_id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://visualdataweb.org/semangit/github_issue_id> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_id"@en .
+<http://visualdataweb.org/semangit/github_issue_id> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_id"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_login
+<http://visualdataweb.org/semangit/github_login> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_login> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_login> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://visualdataweb.org/semangit/github_login> <http://www.w3.org/2000/01/rdf-schema#label> "github_login"@en .
+<http://visualdataweb.org/semangit/github_login> <http://www.w3.org/2000/01/rdf-schema#label> "github_login"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_organization_joined_at
+<http://visualdataweb.org/semangit/github_organization_joined_at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_organization_joined_at> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_organization_join_event> .
+<http://visualdataweb.org/semangit/github_organization_joined_at> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://visualdataweb.org/semangit/github_organization_joined_at> <http://www.w3.org/2000/01/rdf-schema#label> "github_organization_joined_at"@en .
+<http://visualdataweb.org/semangit/github_organization_joined_at> <http://www.w3.org/2000/01/rdf-schema#label> "github_organization_joined_at"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_project_deleted
+<http://visualdataweb.org/semangit/github_project_deleted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_project_deleted> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_project> .
+<http://visualdataweb.org/semangit/github_project_deleted> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://visualdataweb.org/semangit/github_project_deleted> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_deleted"@en .
+<http://visualdataweb.org/semangit/github_project_deleted> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_deleted"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_project_description
+<http://visualdataweb.org/semangit/github_project_description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_project_description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_project> .
+<http://visualdataweb.org/semangit/github_project_description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://visualdataweb.org/semangit/github_project_description> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_description"@en .
+<http://visualdataweb.org/semangit/github_project_description> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_description"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_project_id
+<http://visualdataweb.org/semangit/github_project_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_project_id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_project> .
+<http://visualdataweb.org/semangit/github_project_id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://visualdataweb.org/semangit/github_project_id> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_id"@en .
+<http://visualdataweb.org/semangit/github_project_id> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_id"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_project_join_event_created_at
+<http://visualdataweb.org/semangit/github_project_join_event_created_at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_project_join_event_created_at> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_project_join_event> .
+<http://visualdataweb.org/semangit/github_project_join_event_created_at> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://visualdataweb.org/semangit/github_project_join_event_created_at> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_join_event_created_at"@en .
+<http://visualdataweb.org/semangit/github_project_join_event_created_at> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_join_event_created_at"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_project_language_bytes
+<http://visualdataweb.org/semangit/github_project_language_bytes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_project_language_bytes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_project_language> .
+<http://visualdataweb.org/semangit/github_project_language_bytes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://visualdataweb.org/semangit/github_project_language_bytes> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_language_bytes"@en .
+<http://visualdataweb.org/semangit/github_project_language_bytes> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_language_bytes"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_project_language_timestamp
+<http://visualdataweb.org/semangit/github_project_language_timestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_project_language_timestamp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_project_language> .
+<http://visualdataweb.org/semangit/github_project_language_timestamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://visualdataweb.org/semangit/github_project_language_timestamp> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_language_timestamp"@en .
+<http://visualdataweb.org/semangit/github_project_language_timestamp> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_language_timestamp"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_project_milestone_name
+<http://visualdataweb.org/semangit/github_project_milestone_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_project_milestone_name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_project_milestone> .
+<http://visualdataweb.org/semangit/github_project_milestone_name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://visualdataweb.org/semangit/github_project_milestone_name> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_milestone_name"@en .
+<http://visualdataweb.org/semangit/github_project_milestone_name> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_milestone_name"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_project_name
+<http://visualdataweb.org/semangit/github_project_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_project_name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_project> .
+<http://visualdataweb.org/semangit/github_project_name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://visualdataweb.org/semangit/github_project_name> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_name"@en .
+<http://visualdataweb.org/semangit/github_project_name> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_name"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_pull_request_action_created_at
+<http://visualdataweb.org/semangit/github_pull_request_action_created_at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_pull_request_action_created_at> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_pull_request_action> .
+<http://visualdataweb.org/semangit/github_pull_request_action_created_at> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://visualdataweb.org/semangit/github_pull_request_action_created_at> <http://www.w3.org/2000/01/rdf-schema#label> "github_pull_request_action_created_at"@en .
+<http://visualdataweb.org/semangit/github_pull_request_action_created_at> <http://www.w3.org/2000/01/rdf-schema#label> "github_pull_request_action_created_at"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_pull_request_id
+<http://visualdataweb.org/semangit/github_pull_request_id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_pull_request_id> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_pull_request> .
+<http://visualdataweb.org/semangit/github_pull_request_id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://visualdataweb.org/semangit/github_pull_request_id> <http://www.w3.org/2000/01/rdf-schema#label> "github_pull_request_id"@en .
+<http://visualdataweb.org/semangit/github_pull_request_id> <http://www.w3.org/2000/01/rdf-schema#label> "github_pull_request_id"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_pull_request_intra_branch
+<http://visualdataweb.org/semangit/github_pull_request_intra_branch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_pull_request_intra_branch> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_pull_request> .
+<http://visualdataweb.org/semangit/github_pull_request_intra_branch> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://visualdataweb.org/semangit/github_pull_request_intra_branch> <http://www.w3.org/2000/01/rdf-schema#label> "github_pull_request_intra_branch"@en .
+<http://visualdataweb.org/semangit/github_pull_request_intra_branch> <http://www.w3.org/2000/01/rdf-schema#label> "github_pull_request_intra_branch"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_pull_request_merged
+<http://visualdataweb.org/semangit/github_pull_request_merged> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_pull_request_merged> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_pull_request> .
+<http://visualdataweb.org/semangit/github_pull_request_merged> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://visualdataweb.org/semangit/github_pull_request_merged> <http://www.w3.org/2000/01/rdf-schema#label> "github_pull_request_merged"@en .
+<http://visualdataweb.org/semangit/github_pull_request_merged> <http://www.w3.org/2000/01/rdf-schema#label> "github_pull_request_merged"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_user_city
+<http://visualdataweb.org/semangit/github_user_city> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_user_city> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_user_city> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://visualdataweb.org/semangit/github_user_city> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_city"@en .
+<http://visualdataweb.org/semangit/github_user_city> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_city"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_user_country_code
+<http://visualdataweb.org/semangit/github_user_country_code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_user_country_code> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_user_country_code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://visualdataweb.org/semangit/github_user_country_code> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_country_code"@en .
+<http://visualdataweb.org/semangit/github_user_country_code> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_country_code"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_user_created_at
+<http://visualdataweb.org/semangit/github_user_created_at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_user_created_at> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_user_created_at> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://visualdataweb.org/semangit/github_user_created_at> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_created_at"@en .
+<http://visualdataweb.org/semangit/github_user_created_at> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_created_at"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_user_deleted
+<http://visualdataweb.org/semangit/github_user_deleted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_user_deleted> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_user_deleted> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://visualdataweb.org/semangit/github_user_deleted> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_deleted"@en .
+<http://visualdataweb.org/semangit/github_user_deleted> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_deleted"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_user_fake
+<http://visualdataweb.org/semangit/github_user_fake> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_user_fake> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_user_fake> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://visualdataweb.org/semangit/github_user_fake> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_fake"@en .
+<http://visualdataweb.org/semangit/github_user_fake> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_fake"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_user_is_org
+<http://visualdataweb.org/semangit/github_user_is_org> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_user_is_org> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_user_is_org> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://visualdataweb.org/semangit/github_user_is_org> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_is_org"@en .
+<http://visualdataweb.org/semangit/github_user_is_org> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_is_org"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_user_lat
+<http://visualdataweb.org/semangit/github_user_lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_user_lat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_user_lat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://visualdataweb.org/semangit/github_user_lat> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_lat"@en .
+<http://visualdataweb.org/semangit/github_user_lat> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_lat"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_user_lng
+<http://visualdataweb.org/semangit/github_user_lng> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_user_lng> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_user_lng> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://visualdataweb.org/semangit/github_user_lng> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_lng"@en .
+<http://visualdataweb.org/semangit/github_user_lng> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_lng"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_user_location
+<http://visualdataweb.org/semangit/github_user_location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_user_location> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_user_location> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://visualdataweb.org/semangit/github_user_location> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_location"@en .
+<http://visualdataweb.org/semangit/github_user_location> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_location"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_user_or_project
+<http://visualdataweb.org/semangit/github_user_or_project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_user_or_project> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_follow_event> .
+<http://visualdataweb.org/semangit/github_user_or_project> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://visualdataweb.org/semangit/github_user_or_project> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_or_project"@en .
+<http://visualdataweb.org/semangit/github_user_or_project> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_or_project"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_user_state
+<http://visualdataweb.org/semangit/github_user_state> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_user_state> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_user_state> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://visualdataweb.org/semangit/github_user_state> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_state"@en .
+<http://visualdataweb.org/semangit/github_user_state> <http://www.w3.org/2000/01/rdf-schema#label> "github_user_state"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_userid
+<http://visualdataweb.org/semangit/github_userid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/github_userid> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/github_user> .
+<http://visualdataweb.org/semangit/github_userid> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://visualdataweb.org/semangit/github_userid> <http://www.w3.org/2000/01/rdf-schema#label> "github_userid"@en .
+<http://visualdataweb.org/semangit/github_userid> <http://www.w3.org/2000/01/rdf-schema#label> "github_userid"@iri-based .
+# 
+# http://visualdataweb.org/semangit/gitlab_access_request_active
+<http://visualdataweb.org/semangit/gitlab_access_request_active> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/gitlab_access_request_active> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/gitlab_access_request> .
+<http://visualdataweb.org/semangit/gitlab_access_request_active> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://visualdataweb.org/semangit/gitlab_access_request_active> <http://www.w3.org/2000/01/rdf-schema#label> "gitlab_access_request_active"@en .
+# 
+# http://visualdataweb.org/semangit/gitlab_access_request_created_at
+<http://visualdataweb.org/semangit/gitlab_access_request_created_at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://visualdataweb.org/semangit/gitlab_access_request_requested_at
+<http://visualdataweb.org/semangit/gitlab_access_request_requested_at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://visualdataweb.org/semangit/programming_language_name
+<http://visualdataweb.org/semangit/programming_language_name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/programming_language_name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/programming_language> .
+<http://visualdataweb.org/semangit/programming_language_name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://visualdataweb.org/semangit/programming_language_name> <http://www.w3.org/2000/01/rdf-schema#label> "programming_language_name"@en .
+<http://visualdataweb.org/semangit/programming_language_name> <http://www.w3.org/2000/01/rdf-schema#label> "programming_language_name"@iri-based .
+# 
+# http://visualdataweb.org/semangit/repository_created_at
+<http://visualdataweb.org/semangit/repository_created_at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://visualdataweb.org/semangit/repository_url
+<http://visualdataweb.org/semangit/repository_url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/repository_url> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/repository> .
+<http://visualdataweb.org/semangit/repository_url> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://visualdataweb.org/semangit/repository_url> <http://www.w3.org/2000/01/rdf-schema#label> "repository_url"@en .
+<http://visualdataweb.org/semangit/repository_url> <http://www.w3.org/2000/01/rdf-schema#label> "repository_url"@iri-based .
+# 
+# http://visualdataweb.org/semangit/user_email
+<http://visualdataweb.org/semangit/user_email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://visualdataweb.org/semangit/user_email> <http://www.w3.org/2000/01/rdf-schema#domain> <http://visualdataweb.org/semangit/user> .
+<http://visualdataweb.org/semangit/user_email> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://visualdataweb.org/semangit/user_email> <http://www.w3.org/2000/01/rdf-schema#label> "user_email"@en .
+<http://visualdataweb.org/semangit/user_email> <http://www.w3.org/2000/01/rdf-schema#label> "user_email"@iri-based .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://visualdataweb.org/semangit/comment
+<http://visualdataweb.org/semangit/comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/comment> <http://www.w3.org/2000/01/rdf-schema#label> "comment"@en .
+<http://visualdataweb.org/semangit/comment> <http://www.w3.org/2000/01/rdf-schema#label> "comment"@iri-based .
+# 
+# http://visualdataweb.org/semangit/commentable
+<http://visualdataweb.org/semangit/commentable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/commentable> <http://www.w3.org/2000/01/rdf-schema#label> "commentable"@en .
+<http://visualdataweb.org/semangit/commentable> <http://www.w3.org/2000/01/rdf-schema#label> "commentable"@iri-based .
+# 
+# http://visualdataweb.org/semangit/commit
+<http://visualdataweb.org/semangit/commit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/commit> <http://www.w3.org/2000/01/rdf-schema#label> "commit"@en .
+<http://visualdataweb.org/semangit/commit> <http://www.w3.org/2000/01/rdf-schema#label> "commit"@iri-based .
+# 
+# http://visualdataweb.org/semangit/followable
+<http://visualdataweb.org/semangit/followable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/followable> <http://www.w3.org/2000/01/rdf-schema#label> "followable"@en .
+<http://visualdataweb.org/semangit/followable> <http://www.w3.org/2000/01/rdf-schema#label> "followable"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_commit
+<http://visualdataweb.org/semangit/github_commit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/github_commit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://visualdataweb.org/semangit/commentable> .
+<http://visualdataweb.org/semangit/github_commit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://visualdataweb.org/semangit/commit> .
+<http://visualdataweb.org/semangit/github_commit> <http://www.w3.org/2000/01/rdf-schema#label> "github_commit"@en .
+<http://visualdataweb.org/semangit/github_commit> <http://www.w3.org/2000/01/rdf-schema#label> "github_commit"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_follow_event
+<http://visualdataweb.org/semangit/github_follow_event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/github_follow_event> <http://www.w3.org/2000/01/rdf-schema#label> "github_follow_event"@en .
+<http://visualdataweb.org/semangit/github_follow_event> <http://www.w3.org/2000/01/rdf-schema#label> "github_follow_event"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_issue
+<http://visualdataweb.org/semangit/github_issue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/github_issue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://visualdataweb.org/semangit/commentable> .
+<http://visualdataweb.org/semangit/github_issue> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue"@en .
+<http://visualdataweb.org/semangit/github_issue> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_issue_event
+<http://visualdataweb.org/semangit/github_issue_event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/github_issue_event> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_event"@en .
+<http://visualdataweb.org/semangit/github_issue_event> <http://www.w3.org/2000/01/rdf-schema#label> "github_issue_event"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_organization_join_event
+<http://visualdataweb.org/semangit/github_organization_join_event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/github_organization_join_event> <http://www.w3.org/2000/01/rdf-schema#label> "github_organization_join_event"@en .
+<http://visualdataweb.org/semangit/github_organization_join_event> <http://www.w3.org/2000/01/rdf-schema#label> "github_organization_join_event"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_project
+<http://visualdataweb.org/semangit/github_project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/github_project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://visualdataweb.org/semangit/followable> .
+<http://visualdataweb.org/semangit/github_project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://visualdataweb.org/semangit/repository> .
+<http://visualdataweb.org/semangit/github_project> <http://www.w3.org/2000/01/rdf-schema#label> "github_project"@en .
+<http://visualdataweb.org/semangit/github_project> <http://www.w3.org/2000/01/rdf-schema#label> "github_project"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_project_join_event
+<http://visualdataweb.org/semangit/github_project_join_event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/github_project_join_event> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_join_event"@en .
+<http://visualdataweb.org/semangit/github_project_join_event> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_join_event"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_project_language
+<http://visualdataweb.org/semangit/github_project_language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/github_project_language> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_language"@en .
+<http://visualdataweb.org/semangit/github_project_language> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_language"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_project_milestone
+<http://visualdataweb.org/semangit/github_project_milestone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/github_project_milestone> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_milestone"@en .
+<http://visualdataweb.org/semangit/github_project_milestone> <http://www.w3.org/2000/01/rdf-schema#label> "github_project_milestone"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_pull_request
+<http://visualdataweb.org/semangit/github_pull_request> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/github_pull_request> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://visualdataweb.org/semangit/commentable> .
+<http://visualdataweb.org/semangit/github_pull_request> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://visualdataweb.org/semangit/pull_request> .
+<http://visualdataweb.org/semangit/github_pull_request> <http://www.w3.org/2000/01/rdf-schema#label> "github_pull_request"@en .
+<http://visualdataweb.org/semangit/github_pull_request> <http://www.w3.org/2000/01/rdf-schema#label> "github_pull_request"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_pull_request_action
+<http://visualdataweb.org/semangit/github_pull_request_action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/github_pull_request_action> <http://www.w3.org/2000/01/rdf-schema#label> "github_pull_request_action"@en .
+<http://visualdataweb.org/semangit/github_pull_request_action> <http://www.w3.org/2000/01/rdf-schema#label> "github_pull_request_action"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_repo_label
+<http://visualdataweb.org/semangit/github_repo_label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/github_repo_label> <http://www.w3.org/2000/01/rdf-schema#label> "github_repo_label"@en .
+<http://visualdataweb.org/semangit/github_repo_label> <http://www.w3.org/2000/01/rdf-schema#label> "github_repo_label"@iri-based .
+# 
+# http://visualdataweb.org/semangit/github_user
+<http://visualdataweb.org/semangit/github_user> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/github_user> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://visualdataweb.org/semangit/followable> .
+<http://visualdataweb.org/semangit/github_user> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://visualdataweb.org/semangit/user> .
+<http://visualdataweb.org/semangit/github_user> <http://www.w3.org/2000/01/rdf-schema#label> "github_user"@en .
+<http://visualdataweb.org/semangit/github_user> <http://www.w3.org/2000/01/rdf-schema#label> "github_user"@iri-based .
+# 
+# http://visualdataweb.org/semangit/gitlab_access_request
+<http://visualdataweb.org/semangit/gitlab_access_request> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/gitlab_access_request> <http://www.w3.org/2000/01/rdf-schema#label> "gitlab_access_request"@en .
+# 
+# http://visualdataweb.org/semangit/gitlab_user
+<http://visualdataweb.org/semangit/gitlab_user> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/gitlab_user> <http://www.w3.org/2000/01/rdf-schema#label> "gitlab_user"@en .
+# 
+# http://visualdataweb.org/semangit/programming_language
+<http://visualdataweb.org/semangit/programming_language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/programming_language> <http://www.w3.org/2000/01/rdf-schema#label> "programming_language"@en .
+<http://visualdataweb.org/semangit/programming_language> <http://www.w3.org/2000/01/rdf-schema#label> "programming_language"@iri-based .
+# 
+# http://visualdataweb.org/semangit/pull_request
+<http://visualdataweb.org/semangit/pull_request> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/pull_request> <http://www.w3.org/2000/01/rdf-schema#label> "pull_request"@en .
+<http://visualdataweb.org/semangit/pull_request> <http://www.w3.org/2000/01/rdf-schema#label> "pull_request"@iri-based .
+# 
+# http://visualdataweb.org/semangit/repository
+<http://visualdataweb.org/semangit/repository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/repository> <http://www.w3.org/2000/01/rdf-schema#label> "repository"@en .
+<http://visualdataweb.org/semangit/repository> <http://www.w3.org/2000/01/rdf-schema#label> "repository"@iri-based .
+# 
+# http://visualdataweb.org/semangit/user
+<http://visualdataweb.org/semangit/user> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://visualdataweb.org/semangit/user> <http://www.w3.org/2000/01/rdf-schema#label> "user"@en .
+<http://visualdataweb.org/semangit/user> <http://www.w3.org/2000/01/rdf-schema#label> "user"@iri-based .
+# 
+# http://www.w3.org/2000/01/rdf-schema#Datatype
+<http://www.w3.org/2000/01/rdf-schema#Datatype> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2000/01/rdf-schema#Datatype> <http://www.w3.org/2000/01/rdf-schema#label> "Datatype"@iri-based .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://visualdataweb.org/semangit/gitlab_access_request_created_at> <http://www.w3.org/2000/01/rdf-schema#label> "gitlab_access_request_created_at"@en .
+# 
+<http://visualdataweb.org/semangit/gitlab_access_request_requested_at> <http://www.w3.org/2000/01/rdf-schema#label> "gitlab_access_request_requested_at"@en .
+# 
+<http://visualdataweb.org/semangit/repository_created_at> <http://www.w3.org/2000/01/rdf-schema#label> "repository_created_at"@en .
+<http://visualdataweb.org/semangit/repository_created_at> <http://www.w3.org/2000/01/rdf-schema#label> "repository_created_at"@iri-based .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

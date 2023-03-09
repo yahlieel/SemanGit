@@ -1,0 +1,1368 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://visualdataweb.org/semangit/"
+     xml:base="http://visualdataweb.org/semangit/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:elements="http://purl.org/dc/elements/1.1/#">
+    <owl:Ontology rdf:about="http://visualdataweb.org/semangit/">
+        <elements:creator>Dennis Kubitza, Matthias Böckmann</elements:creator>
+        <elements:description xml:lang="en">An onthology for git</elements:description>
+        <elements:title xml:lang="en">SemanGit</elements:title>
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/#creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/#creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/#description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/#description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/#title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/#title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://visualdataweb.org/semangit/comment_author -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/comment_author">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/comment"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/user"/>
+        <rdfs:label xml:lang="en">comment_author</rdfs:label>
+        <rdfs:label xml:lang="iri-based">comment_author</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/comment_for -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/comment_for">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/comment"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/commentable"/>
+        <rdfs:label xml:lang="en">comment_for</rdfs:label>
+        <rdfs:label xml:lang="iri-based">comment_for</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/commit_author -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/commit_author">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/commit"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/user"/>
+        <rdfs:label xml:lang="en">commit_author</rdfs:label>
+        <rdfs:label xml:lang="iri-based">commit_author</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/commit_belongs_to_repository -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/commit_belongs_to_repository">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/commit"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/repository"/>
+        <rdfs:label xml:lang="en">commit_belongs_to_repository</rdfs:label>
+        <rdfs:label xml:lang="iri-based">commit_belongs_to_repository</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/commit_commited_by -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/commit_commited_by">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/commit"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/user"/>
+        <rdfs:label xml:lang="en">commit_commited_by</rdfs:label>
+        <rdfs:label xml:lang="iri-based">commit_commited_by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/commit_has_parent -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/commit_has_parent">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/commit"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/commit"/>
+        <rdfs:label xml:lang="en">commit_has_parent</rdfs:label>
+        <rdfs:label xml:lang="iri-based">commit_has_parent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_follower -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_follower">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_follow_event"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:label xml:lang="en">github_follower</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_follower</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_follows -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_follows">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_follow_event"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/followable"/>
+        <rdfs:label xml:lang="en">github_follows</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_follows</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_forked_from -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_forked_from">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_project"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/github_project"/>
+        <rdfs:label xml:lang="en">github_forked_from</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_forked_from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_has_owner -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_has_owner">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_project"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:label xml:lang="en">github_has_owner</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_has_owner</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_issue_assignee -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_issue_assignee">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_issue"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:label xml:lang="en">github_issue_assignee</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_issue_assignee</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_issue_event_actor -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_issue_event_actor">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_issue_event"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:label xml:lang="en">github_issue_event_actor</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_issue_event_actor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_issue_event_for -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_issue_event_for">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_issue_event"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/github_issue"/>
+        <rdfs:label xml:lang="en">github_issue_event_for</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_issue_event_for</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_issue_label_used_by -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_issue_label_used_by">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_repo_label"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/github_issue"/>
+        <rdfs:label xml:lang="en">github_issue_label_used_by</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_issue_label_used_by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_issue_project -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_issue_project">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_issue"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/github_project"/>
+        <rdfs:label xml:lang="en">github_issue_project</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_issue_project</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_issue_pull_request -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_issue_pull_request">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_issue"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/github_pull_request"/>
+        <rdfs:label xml:lang="en">github_issue_pull_request</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_issue_pull_request</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_issue_reporter -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_issue_reporter">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_issue"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:label xml:lang="en">github_issue_reporter</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_issue_reporter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_organization_is_joined -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_organization_is_joined">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_organization_join_event"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:label xml:lang="en">github_organization_is_joined</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_organization_is_joined</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_organization_joined_by -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_organization_joined_by">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_organization_join_event"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:label xml:lang="en">github_organiszation_joined_by</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_organization_joined_by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_project_has_milestone -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_project_has_milestone">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_project"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/github_project_milestone"/>
+        <rdfs:label xml:lang="en">github_project_has_milestone</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_project_has_milestone</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_project_joined -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_project_joined">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_project_join_event"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/github_project"/>
+        <rdfs:label xml:lang="en">github_project_joined</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_project_joined</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_project_joining_user -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_project_joining_user">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_project_join_event"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:label xml:lang="en">github_project_joining_user</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_project_joining_user</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_project_language_is -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_project_language_is">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_project_language"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/programming_language"/>
+        <rdfs:label xml:lang="en">github_project_language_is</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_project_language_is</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_project_language_repo -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_project_language_repo">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_project_language"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/github_project"/>
+        <rdfs:label xml:lang="en">github_project_language_repo</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_project_language_repo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_pull_request_action_id -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_pull_request_action_id">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_pull_request_action"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+        <rdfs:label xml:lang="en">github_pull_request_action_id</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_pull_request_action_id</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_pull_request_action_pull_request -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_pull_request_action_pull_request">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_pull_request_action"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/github_pull_request"/>
+        <rdfs:label xml:lang="en">github_pull_request_action_pull_request</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_pull_request_action_pull_request</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_pull_request_action_type -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_pull_request_action_type">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_pull_request_action"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+        <rdfs:label xml:lang="en">github_pull_request_action_type</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_pull_request_action_type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_repo_label_name -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_repo_label_name">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_repo_label"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+        <rdfs:label xml:lang="en">github_repo_label_name</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_repo_label_name</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_repo_label_project -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/github_repo_label_project">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_repo_label"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/github_project"/>
+        <rdfs:label xml:lang="en">github_repo_label_project</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_repo_label_project</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/gitlab_access_request_created_at -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/gitlab_access_request_created_at">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/gitlab_access_request"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/gitlab_access_request_requested_at -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/gitlab_access_request_requested_at">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/gitlab_access_request"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/gitlab_access_token_requested_by -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/gitlab_access_token_requested_by">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/gitlab_access_request"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/gitlab_user"/>
+        <rdfs:label xml:lang="en">gitlab_access_token_requested_by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/pull_request_base_commit -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/pull_request_base_commit">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/pull_request"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/commit"/>
+        <rdfs:label xml:lang="en">pull_request_base_commit</rdfs:label>
+        <rdfs:label xml:lang="iri-based">pull_request_base_commit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/pull_request_base_project -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/pull_request_base_project">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/pull_request"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/repository"/>
+        <rdfs:label xml:lang="en">pull_request_base_project</rdfs:label>
+        <rdfs:label xml:lang="iri-based">pull_request_base_project</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/pull_request_has_commit -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/pull_request_has_commit">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/pull_request"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/commit"/>
+        <rdfs:label xml:lang="en">pull_request_has_commit</rdfs:label>
+        <rdfs:label xml:lang="iri-based">pull_request_has_commit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/pull_request_head_commit -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/pull_request_head_commit">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/pull_request"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/commit"/>
+        <rdfs:label xml:lang="en">pull_request_head_commit</rdfs:label>
+        <rdfs:label xml:lang="iri-based">pull_request_head_commit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/pull_request_head_project -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/pull_request_head_project">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/pull_request"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/repository"/>
+        <rdfs:label xml:lang="en">pull_request_head_project</rdfs:label>
+        <rdfs:label xml:lang="iri-based">pull_request_head_project</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/pull_request_user -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/pull_request_user">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/pull_request"/>
+        <rdfs:range rdf:resource="http://visualdataweb.org/semangit/user"/>
+        <rdfs:label xml:lang="en">pull_request_user</rdfs:label>
+        <rdfs:label xml:lang="iri-based">pull_request_user</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/repository_created_at -->
+
+
+    <owl:ObjectProperty rdf:about="http://visualdataweb.org/semangit/repository_created_at">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/repository"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://visualdataweb.org/semangit/comment_body -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/comment_body">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/comment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">comment_body</rdfs:label>
+        <rdfs:label xml:lang="iri-based">comment_body</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/comment_created_at -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/comment_created_at">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/comment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">comment_created_at</rdfs:label>
+        <rdfs:label xml:lang="iri-based">comment_created_at</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/comment_line -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/comment_line">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/comment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">comment_line</rdfs:label>
+        <rdfs:label xml:lang="iri-based">comment_line</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/comment_pos -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/comment_pos">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/comment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">comment_pos</rdfs:label>
+        <rdfs:label xml:lang="iri-based">comment_pos</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/commit_created_at -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/commit_created_at">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/commit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">commit_created_at</rdfs:label>
+        <rdfs:label xml:lang="iri-based">commit_created_at</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/commit_message -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/commit_message">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/commit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">commit_message</rdfs:label>
+        <rdfs:label xml:lang="iri-based">commit_message</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/commit_sha -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/commit_sha">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/commit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">commit_sha</rdfs:label>
+        <rdfs:label xml:lang="iri-based">commit_sha</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_company -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_company">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">github_company</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_company</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_following_since -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_following_since">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_follow_event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">github_following_since</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_following_since</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_issue_created_at -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_issue_created_at">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_issue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">github_issue_created_at</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_issue_created_at</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_issue_event_action -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_issue_event_action">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_issue_event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">github_issue_event_action</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_issue_event_action</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_issue_event_action_specific_sha -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_issue_event_action_specific_sha">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_issue_event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">github_issue_event_action_specific_sha</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_issue_event_action_specific_sha</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_issue_event_created_at -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_issue_event_created_at">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_issue_event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">github_issue_event_created_at</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_issue_event_created_at</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_issue_id -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_issue_id">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_issue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">github_issue_id</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_issue_id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_login -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_login">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">github_login</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_login</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_organization_joined_at -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_organization_joined_at">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_organization_join_event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">github_organization_joined_at</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_organization_joined_at</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_project_deleted -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_project_deleted">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">github_project_deleted</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_project_deleted</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_project_description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_project_description">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">github_project_description</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_project_description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_project_id -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_project_id">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">github_project_id</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_project_id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_project_join_event_created_at -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_project_join_event_created_at">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_project_join_event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">github_project_join_event_created_at</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_project_join_event_created_at</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_project_language_bytes -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_project_language_bytes">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_project_language"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">github_project_language_bytes</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_project_language_bytes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_project_language_timestamp -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_project_language_timestamp">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_project_language"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">github_project_language_timestamp</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_project_language_timestamp</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_project_milestone_name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_project_milestone_name">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_project_milestone"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">github_project_milestone_name</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_project_milestone_name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_project_name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_project_name">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">github_project_name</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_project_name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_pull_request_action_created_at -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_pull_request_action_created_at">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_pull_request_action"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">github_pull_request_action_created_at</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_pull_request_action_created_at</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_pull_request_id -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_pull_request_id">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_pull_request"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">github_pull_request_id</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_pull_request_id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_pull_request_intra_branch -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_pull_request_intra_branch">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_pull_request"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">github_pull_request_intra_branch</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_pull_request_intra_branch</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_pull_request_merged -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_pull_request_merged">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_pull_request"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">github_pull_request_merged</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_pull_request_merged</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_user_city -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_user_city">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">github_user_city</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_user_city</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_user_country_code -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_user_country_code">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">github_user_country_code</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_user_country_code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_user_created_at -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_user_created_at">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">github_user_created_at</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_user_created_at</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_user_deleted -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_user_deleted">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">github_user_deleted</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_user_deleted</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_user_fake -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_user_fake">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">github_user_fake</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_user_fake</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_user_is_org -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_user_is_org">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">github_user_is_org</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_user_is_org</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_user_lat -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_user_lat">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">github_user_lat</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_user_lat</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_user_lng -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_user_lng">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">github_user_lng</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_user_lng</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_user_location -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_user_location">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">github_user_location</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_user_location</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_user_or_project -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_user_or_project">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_follow_event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">github_user_or_project</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_user_or_project</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_user_state -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_user_state">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">github_user_state</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_user_state</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_userid -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/github_userid">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/github_user"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">github_userid</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_userid</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/gitlab_access_request_active -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/gitlab_access_request_active">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/gitlab_access_request"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">gitlab_access_request_active</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/gitlab_access_request_created_at -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/gitlab_access_request_created_at"/>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/gitlab_access_request_requested_at -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/gitlab_access_request_requested_at"/>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/programming_language_name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/programming_language_name">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/programming_language"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">programming_language_name</rdfs:label>
+        <rdfs:label xml:lang="iri-based">programming_language_name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/repository_created_at -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/repository_created_at"/>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/repository_url -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/repository_url">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/repository"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">repository_url</rdfs:label>
+        <rdfs:label xml:lang="iri-based">repository_url</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/user_email -->
+
+
+    <owl:DatatypeProperty rdf:about="http://visualdataweb.org/semangit/user_email">
+        <rdfs:domain rdf:resource="http://visualdataweb.org/semangit/user"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label xml:lang="en">user_email</rdfs:label>
+        <rdfs:label xml:lang="iri-based">user_email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://visualdataweb.org/semangit/comment -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/comment">
+        <rdfs:label xml:lang="en">comment</rdfs:label>
+        <rdfs:label xml:lang="iri-based">comment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/commentable -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/commentable">
+        <rdfs:label xml:lang="en">commentable</rdfs:label>
+        <rdfs:label xml:lang="iri-based">commentable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/commit -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/commit">
+        <rdfs:label xml:lang="en">commit</rdfs:label>
+        <rdfs:label xml:lang="iri-based">commit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/followable -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/followable">
+        <rdfs:label xml:lang="en">followable</rdfs:label>
+        <rdfs:label xml:lang="iri-based">followable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_commit -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/github_commit">
+        <rdfs:subClassOf rdf:resource="http://visualdataweb.org/semangit/commentable"/>
+        <rdfs:subClassOf rdf:resource="http://visualdataweb.org/semangit/commit"/>
+        <rdfs:label xml:lang="en">github_commit</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_commit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_follow_event -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/github_follow_event">
+        <rdfs:label xml:lang="en">github_follow_event</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_follow_event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_issue -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/github_issue">
+        <rdfs:subClassOf rdf:resource="http://visualdataweb.org/semangit/commentable"/>
+        <rdfs:label xml:lang="en">github_issue</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_issue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_issue_event -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/github_issue_event">
+        <rdfs:label xml:lang="en">github_issue_event</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_issue_event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_organization_join_event -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/github_organization_join_event">
+        <rdfs:label xml:lang="en">github_organization_join_event</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_organization_join_event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_project -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/github_project">
+        <rdfs:subClassOf rdf:resource="http://visualdataweb.org/semangit/followable"/>
+        <rdfs:subClassOf rdf:resource="http://visualdataweb.org/semangit/repository"/>
+        <rdfs:label xml:lang="en">github_project</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_project</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_project_join_event -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/github_project_join_event">
+        <rdfs:label xml:lang="en">github_project_join_event</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_project_join_event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_project_language -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/github_project_language">
+        <rdfs:label xml:lang="en">github_project_language</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_project_language</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_project_milestone -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/github_project_milestone">
+        <rdfs:label xml:lang="en">github_project_milestone</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_project_milestone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_pull_request -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/github_pull_request">
+        <rdfs:subClassOf rdf:resource="http://visualdataweb.org/semangit/commentable"/>
+        <rdfs:subClassOf rdf:resource="http://visualdataweb.org/semangit/pull_request"/>
+        <rdfs:label xml:lang="en">github_pull_request</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_pull_request</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_pull_request_action -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/github_pull_request_action">
+        <rdfs:label xml:lang="en">github_pull_request_action</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_pull_request_action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_repo_label -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/github_repo_label">
+        <rdfs:label xml:lang="en">github_repo_label</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_repo_label</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/github_user -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/github_user">
+        <rdfs:subClassOf rdf:resource="http://visualdataweb.org/semangit/followable"/>
+        <rdfs:subClassOf rdf:resource="http://visualdataweb.org/semangit/user"/>
+        <rdfs:label xml:lang="en">github_user</rdfs:label>
+        <rdfs:label xml:lang="iri-based">github_user</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/gitlab_access_request -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/gitlab_access_request">
+        <rdfs:label xml:lang="en">gitlab_access_request</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/gitlab_user -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/gitlab_user">
+        <rdfs:label xml:lang="en">gitlab_user</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/programming_language -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/programming_language">
+        <rdfs:label xml:lang="en">programming_language</rdfs:label>
+        <rdfs:label xml:lang="iri-based">programming_language</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/pull_request -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/pull_request">
+        <rdfs:label xml:lang="en">pull_request</rdfs:label>
+        <rdfs:label xml:lang="iri-based">pull_request</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/repository -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/repository">
+        <rdfs:label xml:lang="en">repository</rdfs:label>
+        <rdfs:label xml:lang="iri-based">repository</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://visualdataweb.org/semangit/user -->
+
+
+    <owl:Class rdf:about="http://visualdataweb.org/semangit/user">
+        <rdfs:label xml:lang="en">user</rdfs:label>
+        <rdfs:label xml:lang="iri-based">user</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#Datatype -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Datatype">
+        <rdfs:label xml:lang="iri-based">Datatype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://visualdataweb.org/semangit/gitlab_access_request_created_at">
+        <rdfs:label xml:lang="en">gitlab_access_request_created_at</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://visualdataweb.org/semangit/gitlab_access_request_requested_at">
+        <rdfs:label xml:lang="en">gitlab_access_request_requested_at</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://visualdataweb.org/semangit/repository_created_at">
+        <rdfs:label xml:lang="en">repository_created_at</rdfs:label>
+        <rdfs:label xml:lang="iri-based">repository_created_at</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
