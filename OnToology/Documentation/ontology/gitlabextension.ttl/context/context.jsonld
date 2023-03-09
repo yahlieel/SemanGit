@@ -1,0 +1,1378 @@
+{
+  "@context" : {
+    "gitlab_deployment_id" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployment_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "github_follow_event" : {
+      "@id" : "http://visualdataweb.org/semangit/github_follow_event"
+    },
+    "github_forked_from" : {
+      "@id" : "http://visualdataweb.org/semangit/github_forked_from",
+      "@type" : "@id"
+    },
+    "gitlab_issue_label" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_label",
+      "@type" : "@id"
+    },
+    "gitlab_merge_request_description" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_user_fake" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_fake",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_user_name" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_user_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_label_priority" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_label_priority",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_job_stage" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_job_stage",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_merge_request_time_stats" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_time_stats",
+      "@type" : "@id"
+    },
+    "gitlab_issue_related_issue" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_related_issue",
+      "@type" : "@id"
+    },
+    "gitlab_repository_http_url" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_repository_http_url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "gitlab_merge_request_force_remove_source_branch" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_force_remove_source_branch",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_note" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_note"
+    },
+    "gitlab_repository_description" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_repository_description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_group_full_path" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_group_full_path",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_deployment" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployment"
+    },
+    "gitlab_job_web_url" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_job_web_url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "pull_request_base_commit" : {
+      "@id" : "http://visualdataweb.org/semangit/pull_request_base_commit",
+      "@type" : "@id"
+    },
+    "gitlab_repository_readme_url" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_repository_readme_url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "gitlab_merge_request_label" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_label",
+      "@type" : "@id"
+    },
+    "github_project_join_event_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_join_event_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_award_emoji_name" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_award_emoji_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_user_company" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_company",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_following_since" : {
+      "@id" : "http://visualdataweb.org/semangit/github_following_since",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_label_name" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_label_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_user_web_url" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_user_web_url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "gitlab_deployable_name" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployable_name",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "gitlab_job_runner" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_job_runner",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "gitlab_environment_external_url" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_environment_external_url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "gitlab_deployment_environment" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployment_environment",
+      "@type" : "@id"
+    },
+    "gitlab_access_token_requested_by" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_access_token_requested_by",
+      "@type" : "@id"
+    },
+    "gitlab_issue_downvotes" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_downvotes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_merge_request_work_in_progress" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_work_in_progress",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "github_repo_label" : {
+      "@id" : "http://visualdataweb.org/semangit/github_repo_label"
+    },
+    "gitlab_event_project" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_event_project",
+      "@type" : "@id"
+    },
+    "github_user" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user"
+    },
+    "gitlab_environment" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_environment"
+    },
+    "programming_language" : {
+      "@id" : "http://visualdataweb.org/semangit/programming_language"
+    },
+    "pull_request" : {
+      "@id" : "http://visualdataweb.org/semangit/pull_request"
+    },
+    "gitlab_deployment_ref" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployment_ref",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_pipeline_sha" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_pipeline_sha",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_issue_closed_by" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_closed_by",
+      "@type" : "@id"
+    },
+    "github_project_join_event" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_join_event"
+    },
+    "github_project_language" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_language"
+    },
+    "gitlab_deployable_id" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployable_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_merge_request_approval_title" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_approval_title",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_pull_request_action" : {
+      "@id" : "http://visualdataweb.org/semangit/github_pull_request_action"
+    },
+    "gitlab_label_subscribed" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_label_subscribed",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_merge_request_assignee" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_assignee",
+      "@type" : "@id"
+    },
+    "github_issue_event_action_specific_sha" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_event_action_specific_sha",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "branch_name" : {
+      "@id" : "http://visualdataweb.org/semangit/branch_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_repository_last_activity_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_repository_last_activity_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_discussion_has_note" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_discussion_has_note",
+      "@type" : "@id"
+    },
+    "github_user_location" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_location",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "github_issue_project" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_project",
+      "@type" : "@id"
+    },
+    "github_project_language_repo" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_language_repo",
+      "@type" : "@id"
+    },
+    "user_email" : {
+      "@id" : "http://visualdataweb.org/semangit/user_email",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "github_repo_label_project" : {
+      "@id" : "http://visualdataweb.org/semangit/github_repo_label_project",
+      "@type" : "@id"
+    },
+    "gitlab_commit" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_commit"
+    },
+    "gitlab_deployable_runner" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployable_runner",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "gitlab_repository_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_repository_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_milestone" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_milestone"
+    },
+    "github_issue_event_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_event_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_job_duration" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_job_duration",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "gitlab_merge_request_should_remove_source_branch" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_should_remove_source_branch",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_repository_avatar_url" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_repository_avatar_url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "gitlab_merge_request_discussions_locked" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_discussions_locked",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_event_target_title" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_event_target_title",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_follows" : {
+      "@id" : "http://visualdataweb.org/semangit/github_follows",
+      "@type" : "@id"
+    },
+    "gitlab_user_id" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_user_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "github_project_joining_user" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_joining_user",
+      "@type" : "@id"
+    },
+    "gitlab_environment_id" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_environment_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_merge_request_approval_project" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_approval_project",
+      "@type" : "@id"
+    },
+    "gitlab_merge_request_upvotes" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_upvotes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_merge_request_commit" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_commit",
+      "@type" : "@id"
+    },
+    "github_pull_request_action_type" : {
+      "@id" : "http://visualdataweb.org/semangit/github_pull_request_action_type",
+      "@type" : "@id"
+    },
+    "gitlab_merge_request_title" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_title",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "branch" : {
+      "@id" : "http://visualdataweb.org/semangit/branch"
+    },
+    "github_user_city" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_city",
+      "@type" : "@id"
+    },
+    "comment_author" : {
+      "@id" : "http://visualdataweb.org/semangit/comment_author",
+      "@type" : "@id"
+    },
+    "gitlab_note_author" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_note_author",
+      "@type" : "@id"
+    },
+    "gitlab_label_is_project_label" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_label_is_project_label",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_merge_request_approval_merge_status" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_approval_merge_status",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_issue_author" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_author",
+      "@type" : "@id"
+    },
+    "gitlab_label_id" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_label_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "github_issue_event" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_event"
+    },
+    "gitlab_commit_author_email" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_commit_author_email",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_environment_slug" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_environment_slug",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_deployable_started_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployable_started_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_commit_committed_date" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_commit_committed_date",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_job_commit" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_job_commit",
+      "@type" : "@id"
+    },
+    "gitlab_project_join_expires_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_project_join_expires_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "github_organization_join_event" : {
+      "@id" : "http://visualdataweb.org/semangit/github_organization_join_event"
+    },
+    "gitlab_repository_path_with_namespace" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_repository_path_with_namespace",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_event_target_type" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_event_target_type",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_deployable_finished_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployable_finished_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_pipeline_ref" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_pipeline_ref",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_commit_title" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_commit_title",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "user" : {
+      "@id" : "http://visualdataweb.org/semangit/user"
+    },
+    "gitlab_commit_committer_name" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_commit_committer_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "repository_url" : {
+      "@id" : "http://visualdataweb.org/semangit/repository_url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "github_issue" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue"
+    },
+    "gitlab_award_emoji_id" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_award_emoji_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_commit_committer_email" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_commit_committer_email",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_event_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_event_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_deployable_tag" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployable_tag",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_merge_request_web_url" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_web_url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "gitlab_job_status" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_job_status",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_repository_forks_count" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_repository_forks_count",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "github_user_is_org" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_is_org",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "github_issue_event_for" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_event_for",
+      "@type" : "@id"
+    },
+    "emoji_awardable" : {
+      "@id" : "http://visualdataweb.org/semangit/emoji_awardable"
+    },
+    "gitlab_job_name" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_job_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_merge_request_updated_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_updated_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "repository" : {
+      "@id" : "http://visualdataweb.org/semangit/repository"
+    },
+    "gitlab_user_state" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_user_state",
+      "@type" : "@id"
+    },
+    "gitlab_merge_request_allow_maintainer_to_push" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_allow_maintainer_to_push",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "commit_author" : {
+      "@id" : "http://visualdataweb.org/semangit/commit_author",
+      "@type" : "@id"
+    },
+    "github_project_milestone_name" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_milestone_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_issue_confidential" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_confidential",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "github_pull_request_id" : {
+      "@id" : "http://visualdataweb.org/semangit/github_pull_request_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "github_follower" : {
+      "@id" : "http://visualdataweb.org/semangit/github_follower",
+      "@type" : "@id"
+    },
+    "gitlab_issue_updated_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_updated_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_group_parent" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_group_parent",
+      "@type" : "@id"
+    },
+    "github_user_country_code" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_country_code",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_artifact_file_format" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_artifact_file_format",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_organization_joined_by" : {
+      "@id" : "http://visualdataweb.org/semangit/github_organization_joined_by",
+      "@type" : "@id"
+    },
+    "gitlab_deployable_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployable_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "github_issue_assignee" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_assignee",
+      "@type" : "@id"
+    },
+    "gitlab_milestone_state" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_milestone_state",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_user_deleted" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_deleted",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_group_avatar_url" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_group_avatar_url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "pull_request_head_project" : {
+      "@id" : "http://visualdataweb.org/semangit/pull_request_head_project",
+      "@type" : "@id"
+    },
+    "gitlab_merge_request_state" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_state",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_pull_request_action_id" : {
+      "@id" : "http://visualdataweb.org/semangit/github_pull_request_action_id",
+      "@type" : "@id"
+    },
+    "gitlab_user" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_user"
+    },
+    "gitlab_issue_time_stats" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_time_stats",
+      "@type" : "@id"
+    },
+    "commentable" : {
+      "@id" : "http://visualdataweb.org/semangit/commentable"
+    },
+    "gitlab_merge_request_approval_description" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_approval_description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_issue_label_used_by" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_label_used_by",
+      "@type" : "@id"
+    },
+    "gitlab_merge_request_downvotes" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_downvotes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_project_join_active" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_project_join_active",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_award_emoji_updated_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_award_emoji_updated_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_branch_default" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_branch_default",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_merge_request_iid" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_iid",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "github_issue_pull_request" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_pull_request",
+      "@type" : "@id"
+    },
+    "gitlab_award_emoji_author" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_award_emoji_author",
+      "@type" : "@id"
+    },
+    "gitlab_merge_request_id" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_milestone_title" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_milestone_title",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_pipeline_status" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_pipeline_status",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_job_coverage" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_job_coverage",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "gitlab_commit_authored_date" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_commit_authored_date",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "github_issue_event_action" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_event_action",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_deployable" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployable"
+    },
+    "gitlab_job_tag" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_job_tag",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_project_join_joinable" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_project_join_joinable",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/#creator"
+    },
+    "gitlab_issue_upvotes" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_upvotes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_note_updated_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_note_updated_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "github_project_deleted" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_deleted",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_approver" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_approver"
+    },
+    "gitlab_commit_short_id" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_commit_short_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_merge_request_squash" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_squash",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_snippet" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_snippet"
+    },
+    "commit" : {
+      "@id" : "http://visualdataweb.org/semangit/commit"
+    },
+    "gitlab_time_stats" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_time_stats"
+    },
+    "gitlab_repository_web_url" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_repository_web_url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "gitlab_job" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_job"
+    },
+    "gitlab_group_name" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_group_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_deployment_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployment_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_merge_request_milestone" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_milestone",
+      "@type" : "@id"
+    },
+    "gitlab_group_full_name" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_group_full_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_repository_id" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_repository_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_event_action_name" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_event_action_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_repository_name_with_namespace" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_repository_name_with_namespace",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_issue_web_url" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_web_url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "github_organization_joined_at" : {
+      "@id" : "http://visualdataweb.org/semangit/github_organization_joined_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_issue_milestone" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_milestone",
+      "@type" : "@id"
+    },
+    "gitlab_issue_state" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_state",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_deployable_author" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployable_author",
+      "@type" : "@id"
+    },
+    "gitlab_job_ref" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_job_ref",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_deployable_status" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployable_status",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_user_lat" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_lat",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "gitlab_label_text_color" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_label_text_color",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_discussion_individual_note" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_discussion_individual_note",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "followable" : {
+      "@id" : "http://visualdataweb.org/semangit/followable"
+    },
+    "gitlab_group_request_access_enabled" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_group_request_access_enabled",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "github_user_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_award_emoji_awarded_to" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_award_emoji_awarded_to",
+      "@type" : "@id"
+    },
+    "github_user_state" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_state",
+      "@type" : "@id"
+    },
+    "gitlab_deployable_coverage" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployable_coverage",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "commit_commited_by" : {
+      "@id" : "http://visualdataweb.org/semangit/commit_commited_by",
+      "@type" : "@id"
+    },
+    "gitlab_label_description" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_label_description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "programming_language_name" : {
+      "@id" : "http://visualdataweb.org/semangit/programming_language_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_user_or_project" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_or_project",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_repository" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_repository"
+    },
+    "gitlab_eventable" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_eventable"
+    },
+    "gitlab_group_web_url" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_group_web_url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "gitlab_time_stats_total_time_spent" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_time_stats_total_time_spent",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "github_project_name" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "commit_message" : {
+      "@id" : "http://visualdataweb.org/semangit/commit_message",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pull_request_base_project" : {
+      "@id" : "http://visualdataweb.org/semangit/pull_request_base_project",
+      "@type" : "@id"
+    },
+    "gitlab_user_avatar_url" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_user_avatar_url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "gitlab_milestone_project_id" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_milestone_project_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_joinable" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_joinable"
+    },
+    "gitlab_artifact" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_artifact"
+    },
+    "gitlab_group_lfs_enabled" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_group_lfs_enabled",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_issue_iid" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_iid",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Datatype" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#Datatype"
+    },
+    "gitlab_merge_request_allow_collaboration" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_allow_collaboration",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "github_project_description" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_job_finished_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_job_finished_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_access_request_requested_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_access_request_requested_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_group" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_group"
+    },
+    "gitlab_issue_id" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_merge_request_target_branch" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_target_branch",
+      "@type" : "@id"
+    },
+    "gitlab_label_color" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_label_color",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_issue_weight" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_weight",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_issue_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_job_pipeline" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_job_pipeline",
+      "@type" : "@id"
+    },
+    "github_commit" : {
+      "@id" : "http://visualdataweb.org/semangit/github_commit"
+    },
+    "gitlab_job_has_artifact" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_job_has_artifact",
+      "@type" : "@id"
+    },
+    "gitlab_approver_group" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_approver_group",
+      "@type" : "@id"
+    },
+    "gitlab_issue_due_date" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_due_date",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_merge_request_approvals_before_merge" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_approvals_before_merge",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_merge_request_target_project" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_target_project",
+      "@type" : "@id"
+    },
+    "github_pull_request_merged" : {
+      "@id" : "http://visualdataweb.org/semangit/github_pull_request_merged",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_discussion_id" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_discussion_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_branch_commit" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_branch_commit",
+      "@type" : "@id"
+    },
+    "gitlab_branch_developers_can_merge" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_branch_developers_can_merge",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_merge_request_approval_iid" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_approval_iid",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_branch_developers_can_push" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_branch_developers_can_push",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "pull_request_user" : {
+      "@id" : "http://visualdataweb.org/semangit/pull_request_user",
+      "@type" : "@id"
+    },
+    "comment_pos" : {
+      "@id" : "http://visualdataweb.org/semangit/comment_pos",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_time_stats_human_time_estimate" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_time_stats_human_time_estimate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "github_pull_request_action_pull_request" : {
+      "@id" : "http://visualdataweb.org/semangit/github_pull_request_action_pull_request",
+      "@type" : "@id"
+    },
+    "gitlab_issue_title" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_title",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_pull_request_intra_branch" : {
+      "@id" : "http://visualdataweb.org/semangit/github_pull_request_intra_branch",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_merge_request_project" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_project",
+      "@type" : "@id"
+    },
+    "gitlab_repository_name" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_repository_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_project_join_access_level" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_project_join_access_level",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/#title"
+    },
+    "github_project_language_is" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_language_is",
+      "@type" : "@id"
+    },
+    "gitlab_event" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_event"
+    },
+    "gitlab_milestone_updated_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_milestone_updated_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_commit_author_name" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_commit_author_name",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "commit_belongs_to_repository" : {
+      "@id" : "http://visualdataweb.org/semangit/commit_belongs_to_repository",
+      "@type" : "@id"
+    },
+    "gitlab_time_stats_time_estimate" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_time_stats_time_estimate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "commit_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/commit_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "repository_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/repository_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_note_resolvable" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_note_resolvable",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_merge_request_approval_approved_by" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_approval_approved_by",
+      "@type" : "@id"
+    },
+    "github_project_joined" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_joined",
+      "@type" : "@id"
+    },
+    "gitlab_discussion" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_discussion"
+    },
+    "github_issue_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_group_visibility" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_group_visibility",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "commit_deletions" : {
+      "@id" : "http://visualdataweb.org/semangit/commit_deletions",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "github_has_owner" : {
+      "@id" : "http://visualdataweb.org/semangit/github_has_owner",
+      "@type" : "@id"
+    },
+    "gitlab_group_description" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_group_description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "comment_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/comment_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "branch_repository" : {
+      "@id" : "http://visualdataweb.org/semangit/branch_repository",
+      "@type" : "@id"
+    },
+    "gitlab_environment_name" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_environment_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_merge_request_merged_by" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_merged_by",
+      "@type" : "@id"
+    },
+    "gitlab_deployment_sha" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployment_sha",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "comment_line" : {
+      "@id" : "http://visualdataweb.org/semangit/comment_line",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_note_id" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_note_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_artifact_file_type" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_artifact_file_type",
+      "@type" : "@id"
+    },
+    "github_project_milestone" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_milestone"
+    },
+    "gitlab_merge_request_merge_when_pipeline_succeeds" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_merge_when_pipeline_succeeds",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_event_title" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_event_title",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_issue_reporter" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_reporter",
+      "@type" : "@id"
+    },
+    "gitlab_merge_request_author" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_author",
+      "@type" : "@id"
+    },
+    "pull_request_head_commit" : {
+      "@id" : "http://visualdataweb.org/semangit/pull_request_head_commit",
+      "@type" : "@id"
+    },
+    "gitlab_award_emoji_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_award_emoji_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "github_issue_event_actor" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_event_actor",
+      "@type" : "@id"
+    },
+    "gitlab_repository_ssh_url" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_repository_ssh_url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "gitlab_merge_request_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_deployment_author" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployment_author",
+      "@type" : "@id"
+    },
+    "github_repo_label_name" : {
+      "@id" : "http://visualdataweb.org/semangit/github_repo_label_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_pipeline_id" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_pipeline_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "City" : {
+      "@id" : "http://dbpedia.org/ontology/City"
+    },
+    "gitlab_job_author" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_job_author",
+      "@type" : "@id"
+    },
+    "github_project_language_timestamp" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_language_timestamp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_user_joins_project" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_user_joins_project",
+      "@type" : "@id"
+    },
+    "gitlab_milestone_id" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_milestone_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "State" : {
+      "@id" : "http://dbpedia.org/ontology/State"
+    },
+    "gitlab_issue_discussion_locked" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_discussion_locked",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "github_organization_is_joined" : {
+      "@id" : "http://visualdataweb.org/semangit/github_organization_is_joined",
+      "@type" : "@id"
+    },
+    "gitlab_artifact_filename" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_artifact_filename",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_artifact_size" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_artifact_size",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_merge_request_sha" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_sha",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_merge_request_approval_state" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_approval_state",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_approver_user" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_approver_user",
+      "@type" : "@id"
+    },
+    "gitlab_event_target" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_event_target",
+      "@type" : "@id"
+    },
+    "gitlab_job_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_job_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_pipeline" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_pipeline"
+    },
+    "gitlab_merge_request" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request"
+    },
+    "gitlab_event_author" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_event_author",
+      "@type" : "@id"
+    },
+    "gitlab_access_request_state" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_access_request_state",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_access_request_access_level" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_access_request_access_level",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_repository_path" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_repository_path",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_deployment_iid" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployment_iid",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "commit_additions" : {
+      "@id" : "http://visualdataweb.org/semangit/commit_additions",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_branch" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_branch"
+    },
+    "gitlab_access_request_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_access_request_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_milestone_iid" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_milestone_iid",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_issue_assignee" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_assignee",
+      "@type" : "@id"
+    },
+    "gitlab_issue_user_notes_count" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_user_notes_count",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_merge_request_source_branch" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_source_branch",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://visualdataweb.org/semangit/comment"
+    },
+    "gitlab_deployment_deployable" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployment_deployable",
+      "@type" : "@id"
+    },
+    "comment_body" : {
+      "@id" : "http://visualdataweb.org/semangit/comment_body",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_milestone_start_date" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_milestone_start_date",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_award_emoji" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_award_emoji"
+    },
+    "gitlab_issue_description" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_access_request" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_access_request"
+    },
+    "gitlab_merge_request_merged_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_merged_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_merge_request_approval" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_approval"
+    },
+    "github_pull_request" : {
+      "@id" : "http://visualdataweb.org/semangit/github_pull_request"
+    },
+    "github_project" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project"
+    },
+    "gitlab_label" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_label"
+    },
+    "gitlab_job_artifacts_expire_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_job_artifacts_expire_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_milestone_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_milestone_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_issue_closed_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_closed_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_project_join" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_project_join"
+    },
+    "gitlab_repository_default_branch" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_repository_default_branch",
+      "@type" : "@id"
+    },
+    "gitlab_merge_request_approval_id" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_approval_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "github_pull_request_action_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/github_pull_request_action_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_milestone_description" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_milestone_description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_merge_request_closed_by" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_closed_by",
+      "@type" : "@id"
+    },
+    "gitlab_repository_star_count" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_repository_star_count",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_commit_status" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_commit_status",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_issue" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue"
+    },
+    "gitlab_job_id" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_job_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_issue_project_id" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_issue_project_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_merge_request_closed_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_closed_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "comment_for" : {
+      "@id" : "http://visualdataweb.org/semangit/comment_for",
+      "@type" : "@id"
+    },
+    "pull_request_has_commit" : {
+      "@id" : "http://visualdataweb.org/semangit/pull_request_has_commit",
+      "@type" : "@id"
+    },
+    "gitlab_merge_request_source_project" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_merge_request_source_project",
+      "@type" : "@id"
+    },
+    "github_user_login" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_login",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_branch_protected" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_branch_protected",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_milestone_due_date" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_milestone_due_date",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "github_project_has_milestone" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_has_milestone",
+      "@type" : "@id"
+    },
+    "gitlab_job_started_at" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_job_started_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "gitlab_time_stats_human_total_time_spent" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_time_stats_human_total_time_spent",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/#description"
+    },
+    "gitlab_group_id" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_group_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "gitlab_note_attachment" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_note_attachment",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "branch_merged" : {
+      "@id" : "http://visualdataweb.org/semangit/branch_merged",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "gitlab_user_username" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_user_username",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_deployable_stage" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_deployable_stage",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "gitlab_group_path" : {
+      "@id" : "http://visualdataweb.org/semangit/gitlab_group_path",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "commit_has_parent" : {
+      "@id" : "http://visualdataweb.org/semangit/commit_has_parent",
+      "@type" : "@id"
+    },
+    "commit_sha" : {
+      "@id" : "http://visualdataweb.org/semangit/commit_sha",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_user_lng" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_lng",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    }
+  }
+}
