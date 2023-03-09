@@ -1,0 +1,15 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:github_user" "base:user" "base:github_issue" "base:commit" "base:github_project" "base:commentable" "base:pull_request" "base:github_pull_request" "base:followable" "base:repository" "base:github_commit" ; /*classes style*/
+	"base:github_issue" -> "base:commentable" [ label = "rdfs:subClassOf" ];
+	"base:github_commit" -> "base:commentable" [ label = "rdfs:subClassOf" ];
+	"base:github_commit" -> "base:commit" [ label = "rdfs:subClassOf" ];
+	"base:github_project" -> "base:repository" [ label = "rdfs:subClassOf" ];
+	"base:github_project" -> "base:followable" [ label = "rdfs:subClassOf" ];
+	"base:github_pull_request" -> "base:pull_request" [ label = "rdfs:subClassOf" ];
+	"base:github_pull_request" -> "base:commentable" [ label = "rdfs:subClassOf" ];
+	"base:github_user" -> "base:user" [ label = "rdfs:subClassOf" ];
+	"base:github_user" -> "base:followable" [ label = "rdfs:subClassOf" ];
+
+}
