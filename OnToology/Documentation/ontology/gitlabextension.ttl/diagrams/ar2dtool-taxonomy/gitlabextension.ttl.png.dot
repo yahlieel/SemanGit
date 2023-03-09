@@ -1,0 +1,37 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:emoji_awardable" "base:github_user" "base:gitlab_issue" "base:gitlab_deployable" "base:pull_request" "base:commentable" "base:github_pull_request" "base:gitlab_merge_request" "base:gitlab_user" "base:gitlab_joinable" "base:gitlab_milestone" "base:github_issue" "base:comment" "base:github_commit" "base:branch" "base:gitlab_eventable" "base:gitlab_repository" "base:user" "base:gitlab_branch" "base:gitlab_group" "base:repository" "base:commit" "base:followable" "base:github_project" "base:gitlab_snippet" "base:gitlab_commit" "base:gitlab_note" ; /*classes style*/
+	"base:gitlab_branch" -> "base:branch" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_snippet" -> "base:gitlab_eventable" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_snippet" -> "base:emoji_awardable" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_snippet" -> "base:commentable" [ label = "rdfs:subClassOf" ];
+	"base:github_commit" -> "base:commit" [ label = "rdfs:subClassOf" ];
+	"base:github_commit" -> "base:commentable" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_repository" -> "base:gitlab_eventable" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_repository" -> "base:gitlab_joinable" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_repository" -> "base:repository" [ label = "rdfs:subClassOf" ];
+	"base:github_project" -> "base:followable" [ label = "rdfs:subClassOf" ];
+	"base:github_project" -> "base:repository" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_group" -> "base:gitlab_joinable" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_milestone" -> "base:gitlab_eventable" [ label = "rdfs:subClassOf" ];
+	"base:github_pull_request" -> "base:pull_request" [ label = "rdfs:subClassOf" ];
+	"base:github_pull_request" -> "base:commentable" [ label = "rdfs:subClassOf" ];
+	"base:github_user" -> "base:followable" [ label = "rdfs:subClassOf" ];
+	"base:github_user" -> "base:user" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_merge_request" -> "base:gitlab_eventable" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_merge_request" -> "base:emoji_awardable" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_merge_request" -> "base:commentable" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_issue" -> "base:gitlab_eventable" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_issue" -> "base:commentable" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_issue" -> "base:emoji_awardable" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_commit" -> "base:commit" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_commit" -> "base:gitlab_deployable" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_note" -> "base:gitlab_eventable" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_note" -> "base:comment" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_note" -> "base:emoji_awardable" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_user" -> "base:gitlab_eventable" [ label = "rdfs:subClassOf" ];
+	"base:gitlab_user" -> "base:user" [ label = "rdfs:subClassOf" ];
+	"base:github_issue" -> "base:commentable" [ label = "rdfs:subClassOf" ];
+
+}

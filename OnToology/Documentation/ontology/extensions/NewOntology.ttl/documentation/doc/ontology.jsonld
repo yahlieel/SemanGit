@@ -1,0 +1,1598 @@
+[ {
+  "@id" : "http://purl.org/dc/elements/1.1/#creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/#description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/#title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/#creator" : [ {
+    "@value" : "Dennis Kubitza, Matthias Böckmann"
+  } ],
+  "http://purl.org/dc/elements/1.1/#description" : [ {
+    "@language" : "en",
+    "@value" : "An onthology for git"
+  } ],
+  "http://purl.org/dc/elements/1.1/#title" : [ {
+    "@language" : "en",
+    "@value" : "SemanGit"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@language" : "en",
+    "@value" : "1.0"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/comment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "comment"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "comment"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/comment_author",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/comment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "comment_author"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "comment_author"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/user"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/comment_body",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/comment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "comment_body"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "comment_body"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/comment_created_at",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/comment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "comment_created_at"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "comment_created_at"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/comment_for",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/comment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "comment_for"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "comment_for"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/commentable"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/comment_line",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/comment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "comment_line"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "comment_line"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/comment_pos",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/comment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "comment_pos"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "comment_pos"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/commentable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "commentable"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "commentable"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/commit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "commit"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "commit"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/commit_author",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/commit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "commit_author"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "commit_author"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/user"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/commit_belongs_to_repository",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/commit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "commit_belongs_to_repository"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "commit_belongs_to_repository"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/repository"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/commit_commited_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/commit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "commit_commited_by"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "commit_commited_by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/user"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/commit_created_at",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/commit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "commit_created_at"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "commit_created_at"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/commit_has_parent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/commit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "commit_has_parent"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "commit_has_parent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/commit"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/commit_message",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/commit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "commit_message"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "commit_message"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/commit_sha",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/commit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "commit_sha"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "commit_sha"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/followable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "followable"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "followable"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_commit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_commit"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_commit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://visualdataweb.org/semangit/commentable"
+  }, {
+    "@id" : "http://visualdataweb.org/semangit/commit"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_company",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_company"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_company"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_follow_event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_follow_event"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_follow_event"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_follower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_follow_event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_follower"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_follower"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_following_since",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_follow_event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_following_since"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_following_since"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_follows",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_follow_event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_follows"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_follows"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/followable"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_forked_from",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_forked_from"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_forked_from"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_has_owner",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_has_owner"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_has_owner"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_issue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_issue"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_issue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://visualdataweb.org/semangit/commentable"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_issue_assignee",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_issue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_issue_assignee"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_issue_assignee"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_issue_created_at",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_issue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_issue_created_at"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_issue_created_at"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_issue_event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_issue_event"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_issue_event"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_issue_event_action",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_issue_event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_issue_event_action"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_issue_event_action"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_issue_event_action_specific_sha",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_issue_event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_issue_event_action_specific_sha"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_issue_event_action_specific_sha"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_issue_event_actor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_issue_event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_issue_event_actor"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_issue_event_actor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_issue_event_created_at",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_issue_event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_issue_event_created_at"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_issue_event_created_at"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_issue_event_for",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_issue_event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_issue_event_for"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_issue_event_for"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_issue"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_issue_id",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_issue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_issue_id"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_issue_id"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_issue_label_used_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_repo_label"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_issue_label_used_by"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_issue_label_used_by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_issue"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_issue_project",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_issue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_issue_project"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_issue_project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_issue_pull_request",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_issue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_issue_pull_request"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_issue_pull_request"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_pull_request"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_issue_reporter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_issue"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_issue_reporter"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_issue_reporter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_login",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_login"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_login"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_organization_is_joined",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_organization_join_event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_organization_is_joined"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_organization_is_joined"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_organization_join_event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_organization_join_event"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_organization_join_event"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_organization_joined_at",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_organization_join_event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_organization_joined_at"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_organization_joined_at"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_organization_joined_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_organization_join_event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_organiszation_joined_by"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_organization_joined_by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_project",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_project"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://visualdataweb.org/semangit/followable"
+  }, {
+    "@id" : "http://visualdataweb.org/semangit/repository"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_project_deleted",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_project_deleted"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_project_deleted"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_project_description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_project_description"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_project_description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_project_has_milestone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_project_has_milestone"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_project_has_milestone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project_milestone"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_project_id",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_project_id"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_project_id"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_project_join_event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_project_join_event"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_project_join_event"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_project_join_event_created_at",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project_join_event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_project_join_event_created_at"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_project_join_event_created_at"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_project_joined",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project_join_event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_project_joined"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_project_joined"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_project_joining_user",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project_join_event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_project_joining_user"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_project_joining_user"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_project_language",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_project_language"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_project_language"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_project_language_bytes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project_language"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_project_language_bytes"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_project_language_bytes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_project_language_is",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project_language"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_project_language_is"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_project_language_is"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/programming_language"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_project_language_repo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project_language"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_project_language_repo"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_project_language_repo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_project_language_timestamp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project_language"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_project_language_timestamp"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_project_language_timestamp"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_project_milestone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_project_milestone"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_project_milestone"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_project_milestone_name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project_milestone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_project_milestone_name"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_project_milestone_name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_project_name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_project_name"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_project_name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_pull_request",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_pull_request"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_pull_request"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://visualdataweb.org/semangit/commentable"
+  }, {
+    "@id" : "http://visualdataweb.org/semangit/pull_request"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_pull_request_action",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_pull_request_action"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_pull_request_action"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_pull_request_action_created_at",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_pull_request_action"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_pull_request_action_created_at"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_pull_request_action_created_at"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_pull_request_action_id",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_pull_request_action"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_pull_request_action_id"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_pull_request_action_id"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Datatype"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_pull_request_action_pull_request",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_pull_request_action"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_pull_request_action_pull_request"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_pull_request_action_pull_request"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_pull_request"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_pull_request_action_type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_pull_request_action"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_pull_request_action_type"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_pull_request_action_type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Datatype"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_pull_request_id",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_pull_request"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_pull_request_id"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_pull_request_id"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_pull_request_intra_branch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_pull_request"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_pull_request_intra_branch"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_pull_request_intra_branch"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_pull_request_merged",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_pull_request"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_pull_request_merged"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_pull_request_merged"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_repo_label",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_repo_label"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_repo_label"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_repo_label_name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_repo_label"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_repo_label_name"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_repo_label_name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Datatype"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_repo_label_project",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_repo_label"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_repo_label_project"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_repo_label_project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_project"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_user",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_user"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_user"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://visualdataweb.org/semangit/followable"
+  }, {
+    "@id" : "http://visualdataweb.org/semangit/user"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_user_city",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_user_city"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_user_city"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_user_country_code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_user_country_code"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_user_country_code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_user_created_at",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_user_created_at"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_user_created_at"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_user_deleted",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_user_deleted"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_user_deleted"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_user_fake",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_user_fake"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_user_fake"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_user_is_org",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_user_is_org"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_user_is_org"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_user_lat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_user_lat"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_user_lat"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_user_lng",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_user_lng"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_user_lng"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_user_location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_user_location"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_user_location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_user_or_project",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_follow_event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_user_or_project"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_user_or_project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_user_state",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_user_state"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_user_state"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/github_userid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/github_user"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "github_userid"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "github_userid"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/gitlab_access_request",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "gitlab_access_request"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/gitlab_access_request_active",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/gitlab_access_request"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "gitlab_access_request_active"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/gitlab_access_request_created_at",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/gitlab_access_request"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "gitlab_access_request_created_at"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Datatype"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/gitlab_access_request_requested_at",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/gitlab_access_request"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "gitlab_access_request_requested_at"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Datatype"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/gitlab_access_token_requested_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/gitlab_access_request"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "gitlab_access_token_requested_by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/gitlab_user"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/gitlab_user",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "gitlab_user"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/programming_language",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "programming_language"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "programming_language"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/programming_language_name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/programming_language"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "programming_language_name"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "programming_language_name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/pull_request",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "pull_request"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "pull_request"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/pull_request_base_commit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/pull_request"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "pull_request_base_commit"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "pull_request_base_commit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/commit"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/pull_request_base_project",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/pull_request"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "pull_request_base_project"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "pull_request_base_project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/repository"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/pull_request_has_commit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/pull_request"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "pull_request_has_commit"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "pull_request_has_commit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/commit"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/pull_request_head_commit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/pull_request"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "pull_request_head_commit"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "pull_request_head_commit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/commit"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/pull_request_head_project",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/pull_request"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "pull_request_head_project"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "pull_request_head_project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/repository"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/pull_request_user",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/pull_request"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "pull_request_user"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "pull_request_user"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://visualdataweb.org/semangit/user"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/repository",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "repository"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "repository"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/repository_created_at",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/repository"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "repository_created_at"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "repository_created_at"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Datatype"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/repository_url",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/repository"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "repository_url"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "repository_url"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/user",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "user"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "user"
+  } ]
+}, {
+  "@id" : "http://visualdataweb.org/semangit/user_email",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://visualdataweb.org/semangit/user"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "user_email"
+  }, {
+    "@language" : "iri-based",
+    "@value" : "user_email"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#Datatype",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "iri-based",
+    "@value" : "Datatype"
+  } ]
+} ]

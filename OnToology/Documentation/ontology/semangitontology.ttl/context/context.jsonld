@@ -1,0 +1,395 @@
+{
+  "@context" : {
+    "github_follow_event" : {
+      "@id" : "http://visualdataweb.org/semangit/github_follow_event"
+    },
+    "github_forked_from" : {
+      "@id" : "http://visualdataweb.org/semangit/github_forked_from",
+      "@type" : "@id"
+    },
+    "github_user_fake" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_fake",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "github_project_language_bytes" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_language_bytes",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "pull_request_base_commit" : {
+      "@id" : "http://visualdataweb.org/semangit/pull_request_base_commit",
+      "@type" : "@id"
+    },
+    "github_project_join_event_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_join_event_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "github_user_company" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_company",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_following_since" : {
+      "@id" : "http://visualdataweb.org/semangit/github_following_since",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "github_repo_label" : {
+      "@id" : "http://visualdataweb.org/semangit/github_repo_label"
+    },
+    "github_user" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user"
+    },
+    "programming_language" : {
+      "@id" : "http://visualdataweb.org/semangit/programming_language"
+    },
+    "pull_request" : {
+      "@id" : "http://visualdataweb.org/semangit/pull_request"
+    },
+    "github_project_join_event" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_join_event"
+    },
+    "github_project_language" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_language"
+    },
+    "github_pull_request_action" : {
+      "@id" : "http://visualdataweb.org/semangit/github_pull_request_action"
+    },
+    "github_issue_event_action_specific_sha" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_event_action_specific_sha",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_user_location" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_location",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "github_issue_project" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_project",
+      "@type" : "@id"
+    },
+    "github_project_language_repo" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_language_repo",
+      "@type" : "@id"
+    },
+    "user_email" : {
+      "@id" : "http://visualdataweb.org/semangit/user_email",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "github_repo_label_project" : {
+      "@id" : "http://visualdataweb.org/semangit/github_repo_label_project",
+      "@type" : "@id"
+    },
+    "github_issue_event_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_event_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "github_follows" : {
+      "@id" : "http://visualdataweb.org/semangit/github_follows",
+      "@type" : "@id"
+    },
+    "github_project_joining_user" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_joining_user",
+      "@type" : "@id"
+    },
+    "github_pull_request_action_type" : {
+      "@id" : "http://visualdataweb.org/semangit/github_pull_request_action_type",
+      "@type" : "@id"
+    },
+    "github_user_city" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_city",
+      "@type" : "@id"
+    },
+    "comment_author" : {
+      "@id" : "http://visualdataweb.org/semangit/comment_author",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "github_issue_event" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_event"
+    },
+    "github_organization_join_event" : {
+      "@id" : "http://visualdataweb.org/semangit/github_organization_join_event"
+    },
+    "user" : {
+      "@id" : "http://visualdataweb.org/semangit/user"
+    },
+    "repository_url" : {
+      "@id" : "http://visualdataweb.org/semangit/repository_url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "github_issue" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue"
+    },
+    "github_user_is_org" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_is_org",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "github_issue_event_for" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_event_for",
+      "@type" : "@id"
+    },
+    "repository" : {
+      "@id" : "http://visualdataweb.org/semangit/repository"
+    },
+    "commit_author" : {
+      "@id" : "http://visualdataweb.org/semangit/commit_author",
+      "@type" : "@id"
+    },
+    "github_project_milestone_name" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_milestone_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_pull_request_id" : {
+      "@id" : "http://visualdataweb.org/semangit/github_pull_request_id",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "github_follower" : {
+      "@id" : "http://visualdataweb.org/semangit/github_follower",
+      "@type" : "@id"
+    },
+    "github_user_country_code" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_country_code",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_organization_joined_by" : {
+      "@id" : "http://visualdataweb.org/semangit/github_organization_joined_by",
+      "@type" : "@id"
+    },
+    "github_issue_assignee" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_assignee",
+      "@type" : "@id"
+    },
+    "github_user_deleted" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_deleted",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "pull_request_head_project" : {
+      "@id" : "http://visualdataweb.org/semangit/pull_request_head_project",
+      "@type" : "@id"
+    },
+    "github_pull_request_action_id" : {
+      "@id" : "http://visualdataweb.org/semangit/github_pull_request_action_id",
+      "@type" : "@id"
+    },
+    "commentable" : {
+      "@id" : "http://visualdataweb.org/semangit/commentable"
+    },
+    "github_issue_label_used_by" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_label_used_by",
+      "@type" : "@id"
+    },
+    "github_issue_pull_request" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_pull_request",
+      "@type" : "@id"
+    },
+    "github_issue_event_action" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_event_action",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/#creator"
+    },
+    "github_project_deleted" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_deleted",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "commit" : {
+      "@id" : "http://visualdataweb.org/semangit/commit"
+    },
+    "github_organization_joined_at" : {
+      "@id" : "http://visualdataweb.org/semangit/github_organization_joined_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "github_user_lat" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_lat",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "followable" : {
+      "@id" : "http://visualdataweb.org/semangit/followable"
+    },
+    "github_user_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "github_user_state" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_state",
+      "@type" : "@id"
+    },
+    "commit_commited_by" : {
+      "@id" : "http://visualdataweb.org/semangit/commit_commited_by",
+      "@type" : "@id"
+    },
+    "programming_language_name" : {
+      "@id" : "http://visualdataweb.org/semangit/programming_language_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_user_or_project" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_or_project",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "github_project_name" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "commit_message" : {
+      "@id" : "http://visualdataweb.org/semangit/commit_message",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "pull_request_base_project" : {
+      "@id" : "http://visualdataweb.org/semangit/pull_request_base_project",
+      "@type" : "@id"
+    },
+    "Datatype" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#Datatype"
+    },
+    "github_project_description" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_commit" : {
+      "@id" : "http://visualdataweb.org/semangit/github_commit"
+    },
+    "github_pull_request_merged" : {
+      "@id" : "http://visualdataweb.org/semangit/github_pull_request_merged",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "pull_request_user" : {
+      "@id" : "http://visualdataweb.org/semangit/pull_request_user",
+      "@type" : "@id"
+    },
+    "comment_pos" : {
+      "@id" : "http://visualdataweb.org/semangit/comment_pos",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "github_pull_request_action_pull_request" : {
+      "@id" : "http://visualdataweb.org/semangit/github_pull_request_action_pull_request",
+      "@type" : "@id"
+    },
+    "github_pull_request_intra_branch" : {
+      "@id" : "http://visualdataweb.org/semangit/github_pull_request_intra_branch",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/#title"
+    },
+    "github_project_language_is" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_language_is",
+      "@type" : "@id"
+    },
+    "commit_belongs_to_repository" : {
+      "@id" : "http://visualdataweb.org/semangit/commit_belongs_to_repository",
+      "@type" : "@id"
+    },
+    "commit_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/commit_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "repository_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/repository_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "github_project_joined" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_joined",
+      "@type" : "@id"
+    },
+    "github_issue_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "github_has_owner" : {
+      "@id" : "http://visualdataweb.org/semangit/github_has_owner",
+      "@type" : "@id"
+    },
+    "comment_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/comment_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "comment_line" : {
+      "@id" : "http://visualdataweb.org/semangit/comment_line",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "github_project_milestone" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_milestone"
+    },
+    "github_issue_reporter" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_reporter",
+      "@type" : "@id"
+    },
+    "pull_request_head_commit" : {
+      "@id" : "http://visualdataweb.org/semangit/pull_request_head_commit",
+      "@type" : "@id"
+    },
+    "github_issue_event_actor" : {
+      "@id" : "http://visualdataweb.org/semangit/github_issue_event_actor",
+      "@type" : "@id"
+    },
+    "github_repo_label_name" : {
+      "@id" : "http://visualdataweb.org/semangit/github_repo_label_name",
+      "@type" : "@id"
+    },
+    "City" : {
+      "@id" : "http://dbpedia.org/ontology/City"
+    },
+    "github_project_language_timestamp" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_language_timestamp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "State" : {
+      "@id" : "http://dbpedia.org/ontology/State"
+    },
+    "github_organization_is_joined" : {
+      "@id" : "http://visualdataweb.org/semangit/github_organization_is_joined",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://visualdataweb.org/semangit/comment"
+    },
+    "comment_body" : {
+      "@id" : "http://visualdataweb.org/semangit/comment_body",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_pull_request" : {
+      "@id" : "http://visualdataweb.org/semangit/github_pull_request"
+    },
+    "github_project" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project"
+    },
+    "github_pull_request_action_created_at" : {
+      "@id" : "http://visualdataweb.org/semangit/github_pull_request_action_created_at",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "comment_for" : {
+      "@id" : "http://visualdataweb.org/semangit/comment_for",
+      "@type" : "@id"
+    },
+    "pull_request_has_commit" : {
+      "@id" : "http://visualdataweb.org/semangit/pull_request_has_commit",
+      "@type" : "@id"
+    },
+    "github_user_login" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_login",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_project_has_milestone" : {
+      "@id" : "http://visualdataweb.org/semangit/github_project_has_milestone",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/#description"
+    },
+    "commit_has_parent" : {
+      "@id" : "http://visualdataweb.org/semangit/commit_has_parent",
+      "@type" : "@id"
+    },
+    "commit_sha" : {
+      "@id" : "http://visualdataweb.org/semangit/commit_sha",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "github_user_lng" : {
+      "@id" : "http://visualdataweb.org/semangit/github_user_lng",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    }
+  }
+}
