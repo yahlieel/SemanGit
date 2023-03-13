@@ -23,7 +23,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-#Github commits belonging to rails repository
+#Github commits belonging to python repository
 
 SELECT *
 WHERE
@@ -34,42 +34,6 @@ WHERE
   ?commit :commit_author ?author .
   ?project :github_project_name "cpython" .
 }
-[QueryItem="za_os_contribution"]
-PREFIX : <http://visualdataweb.org/semangit/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
-#Github contributions of users with country code "za"
-
-SELECT ?author (COUNT (?commit) AS ?commit_count) (COUNT (?review) AS ?review_count)
-WHERE
-{
-  ?commit a :commit .
-  ?commit :commit_author ?author .
-  ?author :github_user_country_code "za" .
-  ?review :comment_author ?author
-}
-GROUP BY ?author
-ORDER BY DESC(?commit_count)
-LIMIT 10
-[QueryItem="za_follows_query"]
-PREFIX : <http://visualdataweb.org/semangit/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
-#Github project followers of users with country code "za"
-
-SELECT *
-WHERE
-{
-  ?user a :user .
-  ?evnt a :github_follow_event .
-  #?evnt :github_follower ?user .
-  #?evnt :github_follows ?project .
-  ?user :github_user_country_code "za" .
-}
 [QueryItem="za_organizations"]
 PREFIX : <http://visualdataweb.org/semangit/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -79,26 +43,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT *
 WHERE
 {
-  ?org a :user .
-  ?org :github_user_country_code "za" .
-  ?org :github_user_is_org true
-}
-[QueryItem="user_actions"]
-PREFIX : <http://visualdataweb.org/semangit/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
-#Github project followers of users with country code "za"
-
-SELECT *
-WHERE
-{
-  ?user a :user .
-  ?evnt a :github_follow_event .
-  #?evnt :github_follower ?user .
-  #?evnt :github_follows ?project .
-  ?user :github_user_country_code "za" .
+  ?org a :User .
+  ?org :githubUserCountryCode "za" .
+  ?org :githubUserIsOrg true
 }
 [QueryItem="vuejs"]
 PREFIX : <http://visualdataweb.org/semangit/>
@@ -118,26 +65,25 @@ WHERE
 }
 [QueryItem="vuejs_forks"]
 PREFIX : <http://visualdataweb.org/semangit/>
-PREFIX repo: <http://visualdataweb.org/semangit/repository/>
+PREFIX repo: <http://visualdataweb.org/semangit/Repository/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 #Select Vue js repository forks
 
-SELECT ?project_fork ?fork_name ?login ?url
+SELECT ?project_fork ?login ?url
 WHERE
 {
   VALUES ?project { repo:27601818 }
-  ?project_fork :github_forked_from ?project .
-  ?project_fork :github_has_owner ?owner .
-  ?project_fork :github_project_name ?fork_name .
-  ?project_fork :repository_url ?url .
-  ?owner :github_user_login ?login .
+  ?project_fork :githubForkedFrom ?project .
+  ?project_fork :githubHasOwner ?owner .
+  ?project_fork :repositoryUrl ?url .
+  ?owner :githubUserLogin ?login .
 }
 [QueryItem="vue_core_team_members"]
 PREFIX : <http://visualdataweb.org/semangit/>
-PREFIX repo: <http://visualdataweb.org/semangit/repository/>
+PREFIX repo: <http://visualdataweb.org/semangit/Repository/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -148,10 +94,10 @@ SELECT DISTINCT ?user (COUNT (?pr) AS ?pr_count)
 WHERE
 {
   VALUES ?project { repo:27601818 }
-  ?user  :github_user_fake false .
-  ?pr :pull_request_base_project ?project .
-  ?pr :github_pull_request_merged true .
-  ?pr :pull_request_user ?user .
+  ?user :githubUserFake false .
+  ?pr :pullRequestBaseProject ?project .
+  ?pr :githubPullRequestMerged true .
+  ?pr :pullRequestUser ?user .
 }
 GROUP BY ?user
 ORDER BY DESC(?pr_count)
@@ -166,73 +112,52 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?author (COUNT (?commit) AS ?commit_count)
 WHERE
 {
-  ?commit a :commit .
-  ?commit :commit_author ?author .
+  ?author a :User .
+  ?author :hasAuthoredCommit ?commit .
 }
 GROUP BY ?author
 [QueryItem="top_10_contributors"]
 PREFIX : <http://visualdataweb.org/semangit/>
-PREFIX repo: <http://visualdataweb.org/semangit/repository/>
+PREFIX repo: <http://visualdataweb.org/semangit/Repository/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
-SELECT ?project ?committer (COUNT(?commit) as ?commits)
+#Top 10 contributors for REACT repository
+
+SELECT ?committer (COUNT(?commit) as ?commits)
 WHERE {
-  ?commit a :commit .
-  ?commit :commit_belongs_to_repository ?project .
-  ?commit :commit_commited_by ?committer .
-  ?committer  :github_user_fake false .
+  ?committer a :User .
+  ?committer :hasCommittedCommit ?commit .
+  ?commit :belongsToRepository ?project .
+  ?committer :githubUserFake false .
   FILTER (?project IN (repo:3905191))
-  #VALUES ?project { repo:12159636 repo:3905191}
 }  
 GROUP BY ?project ?committer
 ORDER BY DESC(?commits)
 LIMIT 10
-
-#<http://visualdataweb.org/semangit/repository/3905191>	<http://visualdataweb.org/semangit/user/10548>	"4021"^^xsd:integer	
-#<http://visualdataweb.org/semangit/repository/3905191>	<http://visualdataweb.org/semangit/user/417948>	"2599"^^xsd:integer	
-#<http://visualdataweb.org/semangit/repository/3905191>	<http://visualdataweb.org/semangit/user/30351173>	"2409"^^xsd:integer	
-#<http://visualdataweb.org/semangit/repository/3905191>	<http://visualdataweb.org/semangit/user/7122>	"1556"^^xsd:integer	
-#<http://visualdataweb.org/semangit/repository/3905191>	<http://visualdataweb.org/semangit/user/1579646>	"1070"^^xsd:integer	
-#<http://visualdataweb.org/semangit/repository/3905191>	<http://visualdataweb.org/semangit/user/4597>	"986"^^xsd:integer	
-#<http://visualdataweb.org/semangit/repository/3905191>	<http://visualdataweb.org/semangit/user/1637088>	"817"^^xsd:integer	
-#<http://visualdataweb.org/semangit/repository/3905191>	<http://visualdataweb.org/semangit/user/30225>	"680"^^xsd:integer	
-#<http://visualdataweb.org/semangit/repository/3905191>	<http://visualdataweb.org/semangit/user/8075646>	"425"^^xsd:integer	
-#<http://visualdataweb.org/semangit/repository/3905191>	<http://visualdataweb.org/semangit/user/350296>	"382"^^xsd:integer
-
-#<http://visualdataweb.org/semangit/repository/12159636>	<http://visualdataweb.org/semangit/user/988>	"3571"^^xsd:integer	
-#<http://visualdataweb.org/semangit/repository/12159636>	<http://visualdataweb.org/semangit/user/979>	"2873"^^xsd:integer	
-#<http://visualdataweb.org/semangit/repository/12159636>	<http://visualdataweb.org/semangit/user/4834>	"2245"^^xsd:integer	
-#<http://visualdataweb.org/semangit/repository/12159636>	<http://visualdataweb.org/semangit/user/56762>	"2033"^^xsd:integer	
-#<http://visualdataweb.org/semangit/repository/12159636>	<http://visualdataweb.org/semangit/user/176703>	"1833"^^xsd:integer	
-#<http://visualdataweb.org/semangit/repository/12159636>	<http://visualdataweb.org/semangit/user/168873>	"1811"^^xsd:integer	
-#<http://visualdataweb.org/semangit/repository/12159636>	<http://visualdataweb.org/semangit/user/2132795>	"1724"^^xsd:integer	
-#<http://visualdataweb.org/semangit/repository/12159636>	<http://visualdataweb.org/semangit/user/2712156>	"1621"^^xsd:integer	
-#<http://visualdataweb.org/semangit/repository/12159636>	<http://visualdataweb.org/semangit/user/1357270>	"1420"^^xsd:integer	
-#<http://visualdataweb.org/semangit/repository/12159636>	<http://visualdataweb.org/semangit/user/367108>	"1242"^^xsd:integer
 [QueryItem="angular_react_commit_count_by_year"]
 PREFIX : <http://visualdataweb.org/semangit/>
-PREFIX repo: <http://visualdataweb.org/semangit/repository/>
+PREFIX repo: <http://visualdataweb.org/semangit/Repository/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 #Select commits for angular and react repositories
 
-SELECT ?repo_name ?mon (COUNT(?commit) AS ?commits)
+SELECT ?repo_name ?year (COUNT(?commit) AS ?commits)
 WHERE
 {
-  ?commit :commit_belongs_to_repository ?project .
-  ?project :github_project_name ?repo_name .
-  ?commit :commit_created_at ?date .
+  ?commit :belongsToRepository ?project .
+  ?project :githubProjectName ?repo_name .
+  ?commit :commitCreatedAt ?date .
   FILTER (?project IN (repo:3905191, repo:12159636))
 }
-GROUP BY ?repo_name (year(?date) AS ?mon)
+GROUP BY ?repo_name (year(?date) AS ?year)
 [QueryItem="angular_react_commits"]
 PREFIX : <http://visualdataweb.org/semangit/>
-PREFIX repo: <http://visualdataweb.org/semangit/repository/>
+PREFIX repo: <http://visualdataweb.org/semangit/Repository/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -241,14 +166,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?repo_name (COUNT(?commit) AS ?commits)
 WHERE
 {
-  ?commit :commit_belongs_to_repository ?project .
-  ?project :github_project_name ?repo_name .
+  ?commit :belongsToRepository ?project .
+  ?project :githubProjectName ?repo_name .
   FILTER (?project IN (repo:3905191, repo:12159636))
 }
 GROUP BY ?repo_name
 [QueryItem="angular_react_top_10_contributors"]
 PREFIX : <http://visualdataweb.org/semangit/>
-PREFIX repo: <http://visualdataweb.org/semangit/repository/>
+PREFIX repo: <http://visualdataweb.org/semangit/Repository/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -257,35 +182,35 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT *
 WHERE {
   {
-    SELECT ?project ?committer (COUNT(?commit) as ?commits)
+    SELECT ?project ?author (COUNT(?commit) as ?commits)
       WHERE {
-        ?commit :commit_belongs_to_repository ?project .
-        ?commit :commit_author ?committer .
-        ?committer :github_user_fake false .
+        ?commit :belongsToRepository ?project .
+        ?author :hasAuthoredCommit ?commit .
+        ?author :githubUserFake false .
         FILTER (?project IN (repo:3905191))
       }  
-      GROUP BY ?project ?committer
+      GROUP BY ?project ?author
       ORDER BY DESC(?commits)
       LIMIT 10
 
   }
   UNION
   {
-    SELECT ?project ?committer (COUNT(?commit) as ?commits)
+    SELECT ?project ?author (COUNT(?commit) as ?commits)
       WHERE {
-        ?commit :commit_belongs_to_repository ?project .
-        ?commit :commit_author ?committer .
-        ?committer :github_user_fake false .
+        ?commit :belongsToRepository ?project .
+        ?author :hasAuthoredCommit ?commit .
+        ?author :githubUserFake false .
         FILTER (?project IN (repo:12159636))
       }  
-      GROUP BY ?project ?committer
+      GROUP BY ?project ?author
       ORDER BY DESC(?commits)
       LIMIT 10
   }
 }
 [QueryItem="angular_top_10_contributor_commits_vs_prs"]
 PREFIX : <http://visualdataweb.org/semangit/>
-PREFIX repo: <http://visualdataweb.org/semangit/repository/>
+PREFIX repo: <http://visualdataweb.org/semangit/Repository/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -293,17 +218,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?author (COUNT(DISTINCT ?commit) as ?commits) (COUNT(DISTINCT ?pr) AS ?prs)
 WHERE {
   BIND (repo:12159636 AS ?repo)
-  ?commit :commit_belongs_to_repository ?repo .
-  ?commit :commit_author ?author .
-  ?pr :pull_request_base_project ?repo .
-  ?pr :pull_request_user ?author .
+  ?commit :belongsToRepository ?repo .
+  ?commit :commitAuthor ?author .
+  ?pr :pullRequestBaseProject ?repo .
+  ?pr :pullRequestUser ?author .
 }
 GROUP BY ?author
 ORDER BY DESC(?commits)
 LIMIT 10
 [QueryItem="angular_contributor_commits_vs_prs"]
 PREFIX : <http://visualdataweb.org/semangit/>
-PREFIX repo: <http://visualdataweb.org/semangit/repository/>
+PREFIX repo: <http://visualdataweb.org/semangit/Repository/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -311,9 +236,27 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?author (COUNT(DISTINCT ?commit) as ?commits) (COUNT(DISTINCT ?pr) AS ?prs)
 WHERE {
   BIND (repo:12159636 AS ?repo)
-  ?commit :commit_belongs_to_repository ?repo .
-  ?commit :commit_author ?author .
-  ?pr :pull_request_base_project ?repo .
-  ?pr :pull_request_user ?author .
+  ?repo :repositoryHasCommit ?commit .
+  ?author :hasAuthoredCommit ?commit .
+  ?pr :pullRequestBaseProject ?repo .
+  ?pr :pullRequestUser ?author .
 }
 GROUP BY ?author
+[QueryItem="user_programming_language_stats"]
+PREFIX : <http://visualdataweb.org/semangit/>
+PREFIX repo: <http://visualdataweb.org/semangit/Repository/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+#Top 10 contributors for REACT repository
+
+SELECT ?language (COUNT(DISTINCT ?user) as ?user_count)
+WHERE {
+  ?user :programsInLanguage ?projectLanguage .
+  ?projectLanguage :githubProjectLanguageIs ?language .
+}  
+GROUP BY ?language
+ORDER BY DESC(?user_count)
+LIMIT 10

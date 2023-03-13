@@ -185,6 +185,12 @@
         <ObjectProperty IRI="hasCommittedCommit"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="milestoneOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="programsInLanguage"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="pullRequestBaseCommit"/>
     </Declaration>
     <Declaration>
@@ -204,6 +210,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="repositoryHasCommit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/yahlieel/SemanGit/master/obda/semangit.owl/userHasPullRequest"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="commentBody"/>
@@ -419,9 +428,10 @@
         <ObjectProperty IRI="githubHasOwner"/>
         <ObjectProperty IRI="githubOwnerOf"/>
     </InverseObjectProperties>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="belongsToRepository"/>
-    </FunctionalObjectProperty>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="githubProjectHasMilestone"/>
+        <ObjectProperty IRI="milestoneOf"/>
+    </InverseObjectProperties>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="commentAuthor"/>
     </FunctionalObjectProperty>
@@ -469,9 +479,6 @@
     </InverseFunctionalObjectProperty>
     <InverseFunctionalObjectProperty>
         <ObjectProperty IRI="hasCommittedCommit"/>
-    </InverseFunctionalObjectProperty>
-    <InverseFunctionalObjectProperty>
-        <ObjectProperty IRI="repositoryHasCommit"/>
     </InverseFunctionalObjectProperty>
     <AsymmetricObjectProperty>
         <ObjectProperty IRI="commitHasParent"/>
@@ -600,6 +607,14 @@
         <Class IRI="User"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="milestoneOf"/>
+        <Class IRI="GithubProjectMilestone"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="programsInLanguage"/>
+        <Class IRI="User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="pullRequestBaseCommit"/>
         <Class IRI="PullRequest"/>
     </ObjectPropertyDomain>
@@ -626,6 +641,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="repositoryHasCommit"/>
         <Class IRI="Repository"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/yahlieel/SemanGit/master/obda/semangit.owl/userHasPullRequest"/>
+        <Class IRI="User"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="belongsToRepository"/>
@@ -748,6 +767,14 @@
         <Class IRI="Commit"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="milestoneOf"/>
+        <Class IRI="GithubProject"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="programsInLanguage"/>
+        <Class IRI="GithubProjectLanguage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="pullRequestBaseCommit"/>
         <Class IRI="Commit"/>
     </ObjectPropertyRange>
@@ -774,6 +801,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="repositoryHasCommit"/>
         <Class IRI="Commit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="https://raw.githubusercontent.com/yahlieel/SemanGit/master/obda/semangit.owl/userHasPullRequest"/>
+        <Class IRI="PullRequest"/>
     </ObjectPropertyRange>
     <DataPropertyDomain>
         <DataProperty IRI="commentBody"/>
@@ -1569,8 +1600,18 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>milestoneOf</IRI>
+        <Literal xml:lang="en">milestoneOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>programmingLanguageName</IRI>
         <Literal xml:lang="en">programmingLanguageName</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>programsInLanguage</IRI>
+        <Literal xml:lang="en">programsInLanguage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1621,6 +1662,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>userEmail</IRI>
         <Literal xml:lang="en">userEmail</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>https://raw.githubusercontent.com/yahlieel/SemanGit/master/obda/semangit.owl/userHasPullRequest</IRI>
+        <Literal xml:lang="en">userHasPullRequest</Literal>
     </AnnotationAssertion>
 </Ontology>
 

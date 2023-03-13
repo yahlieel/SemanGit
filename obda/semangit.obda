@@ -11,67 +11,87 @@ rdfs:		http://www.w3.org/2000/01/rdf-schema#
 
 [MappingDeclaration] @collection [[
 mappingId	UserMap
-target		:user/{id} a :user ; :github_user_login {login}^^xsd:string ; :github_user_company {company}^^xsd:string ; :github_user_created_at {created_at}^^xsd:dateTime ; :github_user_fake {fake}^^xsd:boolean ; :github_user_deleted {deleted}^^xsd:boolean ; :github_user_lng {long}^^xsd:float ; :github_user_lat {lat}^^xsd:float ; :github_user_country_code {country_code}^^xsd:string ; :github_user_state dbo:State/{state} ; :github_user_city dbo:City/{city} ; :github_user_location {location}^^xsd:string . 
-source		select id, login, company, created_at,  fake, deleted, `long`, lat, country_code, state, city, location from users
+target		:User/{id} a :User ; :githubUserLogin {login}^^xsd:string ; :githubUserCompany {company}^^xsd:string ; :githubUserCreatedAt {created_at}^^xsd:dateTime ; :githubUserFake {fake}^^xsd:boolean ; :githubUserDeleted {deleted}^^xsd:boolean ; :githubUserLng {long}^^xsd:float ; :githubUserLat {lat}^^xsd:float ; :githubUserCountryCode {country_code}^^xsd:string ; :githubUserState {state}^^xsd:string ; :githubUserCity {city}^^xsd:string ; :githubUserLocation {location}^^xsd:string ; :githubUserIsOrg {is_organization}^^xsd:boolean . 
+source		select id, login, company, created_at,  fake, deleted, `long`, lat, country_code, state, city, location,
+			CASE type
+			WHEN 'ORG' THEN 'true'
+			ELSE 'false'
+			END as is_organization
+			from users
 
 mappingId	ProjectMap
-target		:repository/{id} a :repository ; :repository_url {url}^^xsd:anyURI ; :github_has_owner :user/{owner_id} ; :github_project_name {name}^^xsd:string ; :github_project_description {description}^^xsd:string ; :repository_created_at {created_at}^^xsd:dateTime ; :github_forked_from :repository/{forked_from} ; :github_project_deleted {deleted}^^xsd:boolean . 
+target		:Repository/{id} a :Repository ; :repositoryUrl {url}^^xsd:anyURI ; :githubHasOwner :User/{owner_id} ; :githubProjectName {name}^^xsd:string ; :githubProjectDescription {description}^^xsd:string ; :repositoryCreatedAt {created_at}^^xsd:dateTime ; :githubForkedFrom :Repository/{forked_from} ; :githubProjectDeleted {deleted}^^xsd:boolean . 
 source		select id, url, owner_id, name, description, created_at, forked_from, deleted from projects
 
 mappingId	PullRequestMap
-target		:pull_request/{id} a :pull_request ; :pull_request_head_project :repository/{head_repo_id} ; :pull_request_base_project :repository/{base_repo_id} ; :pull_request_head_commit :commit/{head_commit_id} ; :pull_request_base_commit :commit/{base_commit_id} ; :github_pull_request_id {pullreq_id}^^xsd:integer ; :github_pull_request_intra_branch {intra_branch}^^xsd:boolean . 
-source		select * from pull_requests
+target		:PullRequest/{id} a :PullRequest ; :pullRequestHeadProject :Repository/{head_repo_id} ; :pullRequestBaseProject :Repository/{base_repo_id} ; :pullRequestHeadCommit :Commit/{head_commit_id} ; :pullRequestBaseCommit :Commit/{base_commit_id} ; :id {pullreq_id}^^xsd:integer ; :githubPullRequestIntraBranch {intra_branch}^^xsd:boolean . 
+source		select id, head_repo_id, base_repo_id, head_commit_id, base_commit_id, pullreq_id, intra_branch  from pull_requests
 
 mappingId	ProjectCommit
-target		:commit/{commit_id} :commit_belongs_to_repository :repository/{project_id} . 
+target		:Commit/{commit_id} :belongsToRepository :Repository/{project_id} . 
 source		select commit_id, project_id from project_commits
 
 mappingId	PullRequestCommentMap
-target		:comment/{comment_id} a :comment ; :comment_for :pull_request/{pull_request_id} ; :comment_author :user/{user_id} ; :comment_body {body}^^xsd:string ; :comment_pos {position}^^xsd:integer ; :comment_created_at {created_at}^^xsd:dateTime . 
+target		:Comment/{comment_id} a :Comment ; :commentFor :PullRequest/{pull_request_id} ; :commentAuthor :User/{user_id} ; :commentBody {body}^^xsd:string ; :commentPos {position}^^xsd:integer ; :commentCreatedAt {created_at}^^xsd:dateTime . 
 source		select comment_id, pull_request_id, commit_id, user_id, body, position, created_at from pull_request_comments
 
 mappingId	PullRequestHistoryMap
-target		:github_pull_request_action/{id} a :github_pull_request_action ; :github_pull_request_action_pull_request :pull_request/{pull_request_id} ; :github_pull_request_action_type {action}^^xsd:string ; :github_pull_request_action_created_at {created_at}^^xsd:dateTime . 
-source		select id, pull_request_id, created_at, action, actor_id from pull_request_history
+target		:GithubPullRequestAction/{id} a :GithubPullRequestAction ; :githubPullRequestActionFor :PullRequest/{pull_request_id} ; :githubPullRequestActionCreatedAt {created_at}^^xsd:dateTime ; :githubPullRequestActionType {action}^^xsd:string . 
+source		select id, pull_request_id, created_at, action from pull_request_history
 
 mappingId	PullRequestCommitsMap
-target		:pull_request/{pull_request_id} :pull_request_has_commit :commit/{commit_id} . 
+target		:PullRequest/{pull_request_id} :pullRequestHasCommit :Commit/{commit_id} . 
 source		select * from pull_request_commits
 
 mappingId	FollowerMap
-target		:github_follow_event/{follower_id}/{user_id} a :github_follow_event ; :github_follower :user/{follower_id} ; :github_follows :user/{user_id} ; :github_following_since {created_at}^^xsd:dateTime . 
+target		:github_follow_event/{follower_id}/{user_id} a :GithubFollowEvent ; :githubFollower :user/{follower_id} ; :githubFollows :user/{user_id} ; :githubFollowingSince {created_at}^^xsd:dateTime . 
 source		select * from followers
 
 mappingId	ProjectLanguageMap
-target		:github_project_language/{project_id}/{language} a :github_project_language ; :github_project_language_repo :repository/{project_id} ; :github_project_language_is :programming_language/{language} ; :github_project_language_bytes {bytes}^^xsd:integer ; :github_project_language_timestamp {created_at}^^xsd:dateTime . 
+target		:GithubProjectLanguage/{project_id}/{language} a :GithubProjectLanguage ; :githubProjectLanguageRepo :Repository/{project_id} ; :githubProjectLanguageIs :ProgrammingLanguage/{language} ; :githubProjectLanguageBytes {bytes}^^xsd:integer ; :githubProjectLanguageTimestamp {created_at}^^xsd:dateTime . 
 source		select * from project_languages
 
 mappingId	CommitMap
-target		:commit/{id} a :commit ; :commit_sha {sha}^^xsd:string ; :commit_author :user/{author_id} ; :commit_commited_by :user/{committer_id} ; :commit_created_at {created_at} . 
+target		:Commit/{id} a :Commit ; :commitSha {sha}^^xsd:string ; :commitAuthor :User/{author_id} ; :commitedBy :User/{committer_id} ; :commitCreatedAt {created_at}^^xsd:dateTime . 
 source		select id, sha, author_id, committer_id, created_at from commits
 
 mappingId	WatcherMap
-target		:github_follow_event/{repo_id}/{user_id} a :github_follow_event ; :github_follows :repository/{repo_id} ; :github_follower :user/{user_id} ; :github_following_since {created_at}^^xsd:dateTime . 
+target		:GithubFollowEvent/{repo_id}/{user_id} a :GithubFollowEvent ; :githubFollows :Repository/{repo_id} ; :githubFollower :User/{user_id} ; :githubFollowingSince {created_at}^^xsd:dateTime . 
 source		select * from watchers
 
 mappingId	IssueMap
-target		:github_issue/{id} a :github_issue ; :github_issue_project :repository/{repo_id} ; :github_issue_reporter :user/{reporter_id} ; :github_issue_assignee :user/{assignee_id} ; :github_issue_pull_request :pull_request/{pull_request_id} ; :github_issue_created_at {created_at}^^xsd:dateTime . 
+target		:GithubIssue/{id} a :GithubIssue ; :githubIssueProject :Repository/{repo_id} ; :githubIssueReporter :User/{reporter_id} ; :githubIssueAssignee :User/{assignee_id} ; :githubIssuePullRequest :PullRequest/{pull_request_id} ; :githubIssueCreatedAt {created_at}^^xsd:dateTime . 
 source		select id, repo_id, reporter_id, assignee_id, pull_request_id, created_at from issues
 
-mappingId	PullRequestMergeMap
-target		:pull_request/{pull_request_id} a :pull_request ; :github_pull_request_merged "true"^^xsd:boolean . 
-source		select pull_request_id, actor_id from pull_request_history where action = 'merged'
-
 mappingId	PullRequestUserMap
-target		:pull_request/{pull_request_id} a :pull_request ; :pull_request_user :user/{actor_id} . 
+target		:PullRequest/{pull_request_id} a :PullRequest ; :pullRequestUser :User/{actor_id} . 
 source		select pull_request_id, actor_id from pull_request_history
 
 mappingId	CommitCommentMap
-target		:comment/{comment_id} a :comment ; :comment_for :commit/{commit_id} ; :comment_author :user/{user_id} ; :comment_body {body}^^xsd:string ; :comment_pos {position}^^xsd:integer ; :comment_created_at {created_at}^^xsd:dateTime . 
+target		:Comment/{comment_id} a :Comment ; :commentFor :Commit/{commit_id} ; :commentAuthor :User/{user_id} ; :commentBody {body}^^xsd:string ; :commentPos {position}^^xsd:integer ; :commentCreatedAt {created_at}^^xsd:dateTime . 
 source		select comment_id, commit_id, user_id, body, position, created_at from commit_comments
 
-mappingId	UserOrgMap
-target		:user/{id} a :user ; :github_user_is_org "true"^^xsd:boolean . 
-source		select id from users where type = 'ORG'
+mappingId	UserProgramsInLanguageMap
+target		:User/{user_id} :programsInLanguage :GithubProjectLanguage/{project_id}/{language} . 
+source		select distinct c.author_id as user_id, pls.language, proj.id as project_id from projects as proj
+			join project_languages as pls on proj.id = pls.project_id
+			join commits as c on c.project_id = proj.id
+
+mappingId	PullRequestMergedMap
+target		:PullRequest/{pull_request_id} :githubPullRequestMerged {is_merged}^^xsd:boolean . 
+source		select pull_request_id,
+			CASE action
+			WHEN 'merged' THEN 'true'
+			ELSE 'false'
+			END as is_merged
+			from pull_request_history where action = 'merged'
+
+mappingId	ProgrammingLanguageMap
+target		:ProgrammingLanguage/{language} a :ProgrammingLanguage . 
+source		select language from project_languages
+
+mappingId	RepoMilestoneMap
+target		:GithubProjectMilestone/{id} a :GithubProjectMilestone ; :milestoneOf :Repository/{repo_id} ; :githubProjectMilestoneName {name}^^xsd:string . 
+source		select * from repo_milestones
 ]]
 
