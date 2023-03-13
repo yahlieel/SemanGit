@@ -1,0 +1,73 @@
+[PrefixDeclaration]
+:		https://w3id.org/def/semangit/
+dc:		http://purl.org/dc/elements/1.1/#
+dbo:		http://dbpedia.org/ontology/
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+xml:		http://www.w3.org/XML/1998/namespace
+xsd:		http://www.w3.org/2001/XMLSchema#
+obda:		https://w3id.org/obda/vocabulary#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+
+[MappingDeclaration] @collection [[
+mappingId	UserMap
+target		:user/{id} a :User ; :githubUserLogin {login}^^xsd:string ; :githubUserCompany {company}^^xsd:string ; :githubUserCreatedAt {created_at}^^xsd:dateTime ; :githubUserFake {fake}^^xsd:boolean ; :githubUserDeleted {deleted}^^xsd:boolean ; :githubUserLng {long}^^xsd:float ; :githubUserLat {lat}^^xsd:float ; :githubUserCountryCode {country_code}^^xsd:string ; :githubUserState {state}^^xsd:string ; :githubUserCity {city}^^xsd:string ; :githubUserLocation {location}^^xsd:string ; :githubUserIsOrg {is_organization}^^xsd:boolean . 
+source		select id, login, company, created_at,  fake, deleted, `long`, lat, country_code, state, city, location, CASE type WHEN 'ORG' THEN 1 ELSE 0 END AS is_organization from users
+
+mappingId	ProjectMap
+target		:repository/{id} a :Repository ; :repositoryUrl {url}^^xsd:anyURI ; :githubHasOwner :user/{owner_id} ; :githubProjectName {name}^^xsd:string ; :githubProjectDescription {description}^^xsd:string ; :repositoryCreatedAt {created_at}^^xsd:dateTime ; :githubForkedFrom :repository/{forked_from} ; :githubProjectDeleted {deleted}^^xsd:boolean . 
+source		select id, url, owner_id, name, description, created_at, forked_from, deleted from projects
+
+mappingId	PullRequestMap
+target		<http://visualdataweb.org/semangit/pull_request/{id}> a :PullRequest ; :pullRequestHeadProject <http://visualdataweb.org/semangit/repository/{head_repo_id}> ; :pullRequestBaseProject <http://visualdataweb.org/semangit/repository/{base_repo_id}> ; :pullRequestHeadCommit <http://visualdataweb.org/semangit/commit/{head_commit_id}> ; :pullRequestBaseCommit <http://visualdataweb.org/semangit/commit/{base_commit_id}> ; :id {pullreq_id}^^xsd:integer ; :githubPullRequestIntraBranch {intra_branch}^^xsd:boolean . 
+source		select * from pull_requests
+
+mappingId	ProjectCommit
+target		<http://visualdataweb.org/semangit/commit/{commit_id}> :belongsToRepository <http://visualdataweb.org/semangit/repository/{project_id}> . 
+source		select commit_id, project_id from project_commits
+
+mappingId	PullRequestCommentMap
+target		<http://visualdataweb.org/semangit/comment/{comment_id}> a :Comment ; :commentFor <http://visualdataweb.org/semangit/pull_request/{pull_request_id}> ; :commentAuthor <http://visualdataweb.org/semangit/user/{user_id}> ; :commentBody {body}^^xsd:string ; :commentPos {position}^^xsd:integer ; :commentCreatedAt {created_at}^^xsd:dateTime . 
+source		select comment_id, pull_request_id, commit_id, user_id, body, position, created_at from pull_request_comments
+
+mappingId	PullRequestHistoryMap
+target		<http://visualdataweb.org/semangit/github_pull_request_action/{id}> a :GithubPullRequestAction ; :githubPullRequestActionFor <http://visualdataweb.org/semangit/pull_request/{pull_request_id}> ; :githubPullRequestActionType {action}^^xsd:string ; :githubPullRequestActionCreatedAt {created_at}^^xsd:dateTime . 
+source		select id, pull_request_id, created_at, action, actor_id from pull_request_history
+
+mappingId	PullRequestCommitsMap
+target		<http://visualdataweb.org/semangit/pull_request/{pull_request_id}> :pullRequestHasCommit <http://visualdataweb.org/semangit/commit/{commit_id}> . 
+source		select * from pull_request_commits
+
+mappingId	FollowerMap
+target		<http://visualdataweb.org/semangit/github_follow_event/{follower_id}/{user_id}> a :GithubFollowEvent ; :githubFollower <http://visualdataweb.org/semangit/user/{follower_id}> ; :githubFollows <http://visualdataweb.org/semangit/user/{user_id}> ; :githubFollowingSince {created_at}^^xsd:dateTime . 
+source		select * from followers
+
+mappingId	ProjectLanguageMap
+target		<http://visualdataweb.org/semangit/github_project_language/{project_id}/{language}> a :GithubProjectLanguage ; :githubProjectLanguageRepo <http://visualdataweb.org/semangit/repository/{project_id}> ; :githubProjectLanguageIs <http://visualdataweb.org/semangit/programming_language/{language}> ; :githubProjectLanguageBytes {bytes}^^xsd:integer ; :githubProjectLanguageTimestamp {created_at}^^xsd:dateTime . 
+source		select * from project_languages
+
+mappingId	CommitMap
+target		<http://visualdataweb.org/semangit/commit/{id}> a :Commit ; :commitSha {sha}^^xsd:string ; :commitAuthor <http://visualdataweb.org/semangit/user/{author_id}> ; :commitedBy <http://visualdataweb.org/semangit/user/{committer_id}> ; :commitCreatedAt {created_at} . 
+source		select id, sha, author_id, committer_id, created_at from commits
+
+mappingId	WatcherMap
+target		<http://visualdataweb.org/semangit/github_follow_event/{repo_id}/{user_id}> a :GithubFollowEvent ; :githubFollows <http://visualdataweb.org/semangit/repository/{repo_id}> ; :githubFollower <http://visualdataweb.org/semangit/user/{user_id}> ; :githubFollowingSince {created_at}^^xsd:dateTime . 
+source		select * from watchers
+
+mappingId	IssueMap
+target		<http://visualdataweb.org/semangit/github_issue/{id}> a :GithubIssue ; :githubIssueProject <http://visualdataweb.org/semangit/repository/{repo_id}> ; :githubIssueReporter <http://visualdataweb.org/semangit/user/{reporter_id}> ; :githubIssueAssignee <http://visualdataweb.org/semangit/user/{assignee_id}> ; :githubIssuePullRequest <http://visualdataweb.org/semangit/pull_request/{pull_request_id}> ; :githubIssueCreatedAt {created_at}^^xsd:dateTime . 
+source		select id, repo_id, reporter_id, assignee_id, pull_request_id, created_at from issues
+
+mappingId	PullRequestMergeMap
+target		<http://visualdataweb.org/semangit/pull_request/{pull_request_id}> a :PullRequest ; :githubPullRequestMerged "true"^^xsd:boolean . 
+source		select pull_request_id, actor_id from pull_request_history where action = 'merged'
+
+mappingId	PullRequestUserMap
+target		<http://visualdataweb.org/semangit/pull_request/{pull_request_id}> a :PullRequest ; :pullRequestUser <http://visualdataweb.org/semangit/user/{actor_id}> . 
+source		select pull_request_id, actor_id from pull_request_history
+
+mappingId	CommitCommentMap
+target		<http://visualdataweb.org/semangit/comment/{comment_id}> a :Comment ; :commentFor <http://visualdataweb.org/semangit/commit/{commit_id}> ; :commentAuthor <http://visualdataweb.org/semangit/user/{user_id}> ; :commentBody {body}^^xsd:string ; :commentPos {position}^^xsd:integer ; :commentCreatedAt {created_at}^^xsd:dateTime . 
+source		select comment_id, commit_id, user_id, body, position, created_at from commit_comments
+]]
+
