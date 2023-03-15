@@ -13,11 +13,7 @@ This repository is structured as follows:
 
 Note: The links to other submodules posted here will lead you to the latest stable version, we consider suitable for a release. These might not be newest version we provide in the Repositories SemanGit/Converter or Semangit/LinuxDownloader.
 
-To download everything you can use following commands in your git console:
+---
 
-```sh
-$ git clone --recurse-submodules -j8 https://github.com/yahlieel/SemanGit.git
-```
-
-This fork contains extensions to the original SemanGit ontology that is used in experiments for Ontology-based data access on the GHTorrent MySQL dataset using Ontop.
+This fork contains extensions to the original SemanGit ontology that is used in experiments for Ontology-based data access on the GHTorrent MySQL dataset using [Ontop](https://ontop-vkg.org).
 The extensions are contained in the [**obda**](obda) directory
