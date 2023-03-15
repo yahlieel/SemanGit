@@ -93,5 +93,17 @@ source		select language from project_languages
 mappingId	RepoMilestoneMap
 target		:GithubProjectMilestone/{id} a :GithubProjectMilestone ; :milestoneOf :Repository/{repo_id} ; :githubProjectMilestoneName {name}^^xsd:string . 
 source		select * from repo_milestones
+
+mappingId	ProjectLabelMap
+target		:GithubRepoLabel/{id} a :GithubRepoLabel ; :githubRepoLabelProject :Repository/{repo_id} ; :githubRepoLabelName {name}^^xsd:string . 
+source		select id, repo_id, name from repo_labels
+
+mappingId	OrganizationMemberMap
+target		:GithubOrganizationJoinEvent/{org_id}/{user_id} a :GithubOrganizationJoinEvent ; :githubOrganizationJoinedBy :User/{user_id} ; :githubOrganizationJoinedAt {created_at}^^xsd:dateTime . 
+source		select * from organization_members
+
+mappingId	IssueLabelMap
+target		:GithubRepoLabel/{label_id} a :GithubRepoLabel ; :githubIssueLabelUsedBy :GithubIssue/{issue_id} . 
+source		select label_id, issue_id from issue_labels
 ]]
 

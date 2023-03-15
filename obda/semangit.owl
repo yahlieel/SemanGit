@@ -1520,6 +1520,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>githubRepoLabelName</IRI>
+        <Literal xml:lang="en">githubRepoLabelName</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>githubRepoLabelProject</IRI>
         <Literal xml:lang="en">githubRepoLabelProject</Literal>
     </AnnotationAssertion>
