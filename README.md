@@ -15,5 +15,5 @@ Note: The links to other submodules posted here will lead you to the latest stab
 
 ---
 
-This fork contains extensions to the original SemanGit ontology that is used in experiments for Ontology-based data access on the GHTorrent MySQL dataset using [Ontop](https://ontop-vkg.org).
+This fork contains extensions to the original SemanGit ontology and is used in experiments for Ontology-based data access on the GHTorrent MySQL dataset using [Ontop](https://ontop-vkg.org).
 The extensions are contained in the [**obda**](obda) directory
