@@ -17,3 +17,7 @@ Note: The links to other submodules posted here will lead you to the latest stab
 
 This fork contains extensions to the original SemanGit ontology and is used in experiments for Ontology-based data access on the GHTorrent MySQL dataset using [Ontop](https://ontop-vkg.org).
 The extensions are contained in the [**obda**](obda) directory
+
+For detailed insights and methodologies related to this project, please refer to the associated research paper:
+
+Jafta, Y., Leenen, L., Meyer, T. (2023). Investigating Ontology-Based Data Access with GitHub. In: Pesquita, C., et al. The Semantic Web. ESWC 2023. Lecture Notes in Computer Science, vol 13870. Springer, Cham. https://doi.org/10.1007/978-3-031-33455-9_38
